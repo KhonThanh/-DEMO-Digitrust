@@ -1,0 +1,93 @@
+:root {
+  --primary-color: #006FBB;
+  --secondary-color: #005088;
+  --light-blue: #37BDB8;
+  --white-color: #FFFFFF;
+  --black-color: #3333333;
+  --white-blue: #F1F8FF;
+  --font-size-base: 16px;
+  --font-roboto: 'Roboto', Arial, sans-serif;
+  --font-dancing: 'Dancing Script', cursive;
+}
+
+main {
+  position: relative;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  caret-color: transparent;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  font-family: var(--font-roboto);
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-color);
+  font-family: var(--font-roboto);
+  overflow-x: hidden;
+  position: relative;
+}
+
+header,
+footer,
+section {
+  justify-content: center;
+}
+
+header {
+  z-index: 1;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  background-color: var(--white-color);
+  box-shadow: 0 0px 1px rgba(0, 0, 0, 0.15);
+  padding-bottom: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0px;
+  margin: 0px;
+  font-weight: bold;
+  color: var(--black-color);
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black-color);
+  cursor: pointer;
+}
+
+*:not(input):not(textarea) {
+  caret-color: transparent;
+}
+
+p {
+  line-height: 1.5;
+}

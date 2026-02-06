@@ -1,0 +1,54 @@
+@media screen and (min-width: 1074px) {
+    .menu-container__bar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1073px) {
+    .menu-container__item {
+        display: none;
+    }
+
+    .header-bottom {
+        flex-grow: 1;
+        justify-content: right;
+    }
+
+}
+
+@media screen and (max-width: 900px) {}
+
+@media screen and (max-width: 835px) {}
+
+@media screen and (min-width: 769px) {}
+
+@media screen and (max-width: 768px) {
+
+    :root {
+        --font-size-base: 14px;
+    }
+
+    .container-padding {
+        padding: 30px 0px;
+    }
+
+}
+
+@media screen and (max-width : 700px) {}
+
+@media screen and (max-width: 590px) {
+
+    .header-bottom,
+    .header-function {
+        display: none;
+    }
+
+    header {
+        padding-bottom: 0px;
+    }
+
+}
+
+@media screen and (max-width: 551px) {}
+
+@media screen and (max-width: 480px) {}

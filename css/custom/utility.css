@@ -1,0 +1,50 @@
+.bg-primary { background-color: var(--primary-color);}
+.bg-secondary { background-color: var(--secondary-color);}
+.bg-white { background-color: var(--white-color);}
+.bg-blue-white { background-color: var(--white-blue);}
+
+.flex { display: flex; }
+.flex-col {flex-direction: column;}
+.flex-wrap{flex-wrap: wrap;}
+.center-hor{justify-content: center;}
+.center-ver{align-items: center;}
+.container-padding { padding: 60px 0px;}
+
+.uppercase { text-transform: uppercase; }
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+
+.text-center { text-align: center; }
+.pos-rel { position: relative; };
+.pos-abs { position: absolute; };
+.pos-fixed { position: fixed; };
+.pos-stick { position: sticky; }
+
+.container-xs,
+.container-m,
+.container-l,
+.container-s {
+  margin: 0 auto;
+  width: calc(100% - 20px);
+}
+
+.container-f{
+  max-width: 100%;
+  width: 100%;
+}
+
+.container-l{
+  max-width: 1414px;
+}
+
+.container-m {
+  max-width: 1199px;
+}
+
+.container-s {
+  max-width: 1098px;
+}
+
+.container-xs {
+  max-width: 920px;
+}
