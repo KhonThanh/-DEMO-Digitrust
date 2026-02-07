@@ -76,8 +76,7 @@
 
 .menu-container__bar {
     background-color: var(--primary-color);
-    aspect-ratio: 1 / 1;
-    width: 37px;
+    width: 48px;
     border: none;
     border-radius: 5px;
     height: auto;
@@ -304,15 +303,35 @@
     transform: translateY(0);
 }
 
-.btn-get-a-quote{
+.btn-submit {
+    width: 100%;
+}
+
+.btn-custom,
+.btn-get-a-quote {
+    width: fit-content;
+}
+
+.btn-get-a-quote {
     text-transform: uppercase;
 }
 
+.btn-submit,
+.btn-custom {
+    border: none;
+}
+
+.btn-submit,
+.btn-custom,
 .btn-get-a-quote,
 .btn-res-login {
     padding: 12px 10px;
     background-color: var(--primary-color);
     border-radius: 10px;
+    color: var(--white-color);
+}
+
+.btn-res-login a {
     color: var(--white-color);
 }
 
@@ -342,6 +361,294 @@
     background-repeat: no-repeat;
 }
 
+/* css product feature */
+.contact__container,
+.feature-product__container {
+    margin-top: 30px;
+}
+
+.feature-product__container {
+    gap: 20px;
+}
+
+
+.feature-product__item.feature-product__active,
+.feature-product__item {
+    width: calc(100% / 3 - 16px);
+    border-radius: 10px;
+    box-shadow: 0px 1px 7px 2px rgba(0, 0, 0, 0.25);
+}
+
+.feature-product__item.feature-product__active {
+    border: 1px solid var(--primary-color) !important;
+}
+
+.feature-product__item {
+    border: 1px solid var(--gray-color);
+}
+
+.feature-product__item.feature-product__active .feature-product__title,
+.feature-product__title {
+    width: 100%;
+    padding: 30px 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.feature-product__item.feature-product__active .feature-product__title {
+    background-color: var(--primary-color);
+}
+
+.feature-product__title {
+    background-color: var(--gray-color);
+}
+
+.feature-product__title h4 {
+    font-size: calc(var(--font-size-base) * 2);
+}
+
+.feature-product__title p {
+    font-size: var(--font-size-base);
+}
+
+.feature-product__item.feature-product__active .feature-product__title h4,
+.feature-product__item.feature-product__active .feature-product__title p,
+.feature-product__title h4,
+.feature-product__title p {
+    font-weight: bold;
+}
+
+.feature-product__item.feature-product__active .feature-product__title h4,
+.feature-product__item.feature-product__active .feature-product__title p {
+    color: var(--white-color);
+}
+
+.feature-product__title h4,
+.feature-product__title p {
+    color: var(--black-color);
+}
+
+.feature-product__list li {
+    gap: 20px;
+}
+
+.feature-product__list img {
+    max-width: 11px;
+    aspect-ratio: 1 / 1;
+}
+
+.feature-product__content {
+    width: 100%;
+    padding: 20px 40px;
+    gap: 10px;
+    min-height: 331px;
+    justify-content: space-between;
+}
+
+/* css hệ thống hạ tầng */
+.infrastructure-system__container {}
+
+.flex {}
+
+.flex-col {}
+
+.infrastructure-system__title {
+    color: var(--white-color);
+}
+
+.text-center {}
+
+.infrastructure-system__content {
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.infrastructure-system__item {
+    border-radius: 10px;
+    border: 2px solid var(--white-color);
+    gap: 10px;
+    padding: 30px;
+    border-radius: 15px;
+    width: calc(100% / 4 - 16px);
+}
+
+.product-item__content h5,
+.why-choose-us__item h5,
+.infrastructure-system__item h5 {
+    font-size: calc(var(--font-size-base) + 8px);
+}
+
+.infrastructure-system__item img {
+    max-width: 110px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+}
+
+.infrastructure-system__item * {
+    color: var(--white-color);
+}
+
+/* css vì sao chọn chúng tôi */
+.why-choose-us__container {
+    gap: 20px;
+}
+
+.why-choose-us__item {
+    width: calc(100% / 2 - 20px);
+}
+
+.why-choose-us__item:nth-child(2) {
+    padding: 20px;
+    gap: 20px;
+}
+
+.why-choose-us__item h5 {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.feature-product__list {}
+
+/* CSS sản phẩm */
+
+.product-filter__container,
+.product__container {
+    gap: 30px;
+}
+
+.product-filter__container {}
+
+.product-filter__item {
+    gap: 10px;
+    max-width: 380px;
+    min-width: 110px;
+}
+
+.product-filter__title {}
+
+.filter-radio {
+    gap: 10px;
+}
+
+.all-product__content {
+    gap: 20px;
+}
+
+.product-item {
+    width: calc(100% / 6 - 20px);
+    background-color: var(--white-color);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.15);
+    padding: 20px 10px;
+}
+
+.product-item__content h5 {
+    text-transform: capitalize;
+}
+
+.product-item .btn-custom {
+    font-size: calc(var(--font-size-base) - 2px);
+}
+
+.product-item__content {
+    gap: 10px;
+}
+
+/* css trang liên hệ */
+.map-content {
+    width: 100%;
+    aspect-ratio: 16 / 5;
+}
+
+.contact__social,
+.contact__container {
+    gap: 20px;
+}
+
+.contact__content {
+    gap: 10px;
+}
+
+.contact__item {
+    gap: 10px;
+    width: calc(100% / 2 - 10px);
+}
+
+.contact__icon {
+    aspect-ratio: 1 / 1;
+    max-width: 32px;
+}
+
+.contact__info {}
+
+.contact__social {}
+
+.contact-form {
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--black-color);
+    gap: 10px;
+}
+
+.form-row {
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1 1 calc(100% / 2 - 20px);
+    gap: 10px;
+}
+
+.form-row .form-group select,
+.form-row .form-group input {
+    min-height: 39px;
+}
+
+.form-row .form-group select,
+.form-row .form-group input,
+.form-group textarea {
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.form-group input {
+    min-height: 100px;
+}
+
+.full-width {}
+
+.captcha {}
+
+.recaptcha-box {}
+
+/* css blog */
+.blog-content__container {
+    gap: 20px;
+}
+
+.blog-content__right,
+.blog-content__left {
+    gap: 10px;
+}
+
+.blog-content__left {
+    flex: 1 1 70%;
+}
+
+.blog-content__left ul{
+    padding-left: 30px;
+}
+
+.blog-content__right {
+    flex: 0 0 30%;
+}
+
+.blog-content__right a {
+    color: var(--light-blue);
+}
+
 /* css footer */
 
 footer {
@@ -349,7 +656,7 @@ footer {
 }
 
 .footer-top {
-    margin: 10px 0px;
+    margin: 20px 0px;
 }
 
 .footer-top img {

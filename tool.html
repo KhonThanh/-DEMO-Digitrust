@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitrust</title>
+    <link rel="icon" type="image/png" href="./img/logo/logo-menu.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <header class="container-f" data-include="./component/header.html"></header>
+    <div class=" center-hor bg-white menu-mobile__container" data-include="./component/menumobile.html"> </div>
+    <main class="container-f flex flex-col center-hor">
+        <section class="flex bg-gray container-m ">
+            <div class="container-l nav-bar__container">
+                <a href="#" class="nav-bar__item">Trang chủ</a>
+                <a href="#" class="nav-bar__item">Công cụ</a>
+            </div>
+        </section>
+        <section class="container-f container-padding">
+            <div class="flex container-m blog-content__container">
+                <div class="blog-content__left flex flex-col">
+                    <h1>Cách cài đặt chứng chỉ SSL trên cPanel</h1>
+                    <p><strong>Cập nhật lần cuối:</strong> 25/10/2023</p>
+                    <p>
+                        Digitrust cung cấp bài viết hướng dẫn chi tiết cách cài đặt chứng chỉ SSL trên cPanel.
+                        Với hướng dẫn này, bạn có thể tự cài đặt chứng chỉ SSL cho website của mình
+                        một cách dễ dàng và nhanh chóng.
+                    </p>
+                    <h2>Điều kiện cần chuẩn bị (Prerequisites)</h2>
+                    <ul>
+                        <li>Bạn đã mua hoặc được cấp chứng chỉ SSL hợp lệ</li>
+                        <li>Bạn có quyền truy cập vào cPanel hosting</li>
+                        <li>Website đã trỏ domain về hosting</li>
+                        <li>
+                            Bạn đã tạo CSR (Certificate Signing Request) và nhận được bộ file SSL
+                            từ nhà cung cấp
+                        </li>
+                    </ul>
+                    <h2>Hướng dẫn cài đặt SSL từng bước</h2>
+                    <h3>Bước 1: Đăng nhập vào cPanel</h3>
+                    <p>
+                        Đăng nhập vào tài khoản cPanel của bạn thông qua đường dẫn
+                        do nhà cung cấp hosting cung cấp.
+                    </p>
+                    <h3>Bước 2: Truy cập mục SSL/TLS</h3>
+                    <p>
+                        Trong giao diện cPanel, tìm và chọn mục SSL/TLS.
+                    </p>
+                    <h3>Bước 3: Cài đặt chứng chỉ SSL</h3>
+                    <ul>
+                        <li>Chọn Manage SSL sites (hoặc “Install and Manage SSL for your site”)</li>
+                        <li>Tại phần Domain, chọn tên miền cần cài SSL</li>
+                        <li>Dán nội dung:</li>
+                        <ul>
+                            <li>Certificate (CRT)</li>
+                            <li>Private Key</li>
+                            <li>Certificate Authority Bundle (CABUNDLE) (nếu có)</li>
+                        </ul>
+                    </ul>
+                    <h3>Bước 4: Cài đặt chứng chỉ</h3>
+                    <p>
+                        Sau khi điền đầy đủ thông tin, nhấn Install Certificate
+                        để hoàn tất quá trình cài đặt.
+                    </p>
+                    <h3>Bước 5: Kiểm tra SSL</h3>
+                    <p>Sau khi cài đặt xong:</p>
+                    <ul>
+                        <li>Truy cập website bằng https://</li>
+                        <li>Kiểm tra biểu tượng ổ khóa trên trình duyệt</li>
+                        <li>Có thể sử dụng công cụ SSL Checker để kiểm tra lại</li>
+                    </ul>
+                    <h3>Hoàn tất</h3>
+                    <p>
+                        Nếu SSL được cài đặt đúng, website của bạn sẽ hiển thị kết nối
+                        bảo mật HTTPS và không còn cảnh báo bảo mật trên trình duyệt.
+                    </p>
+                </div>
+                <div class="blog-content__right flex flex-col">
+                    <h2>Bài viết mới nhất</h2>
+                    <a>Hướng dẫn tạo CSR trên cPanel</a>
+                    <a>Tạo mã CSR trên cPanel</a>
+                    <a>Khắc phục lỗi cài đặt SSL</a>
+                    <a>Xử lý lỗi SSL thường gặp trên cPanel</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="container-f bg-white center-ver" data-include="./component/footer.html"></footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="./js/frontend.js"></script>
+</body>
+
+</html>

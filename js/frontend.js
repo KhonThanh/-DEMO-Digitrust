@@ -492,6 +492,24 @@ function generateHeadingLinks({
     }
   }
 }
+// js bật tắt menu
+function toggleMenu(buttonSelector, menuSelector) {
+  const button = document.querySelector(buttonSelector);
+  const menu = document.querySelector(menuSelector);
+
+  if (!button || !menu) return;
+
+  button.addEventListener('click', (e) => {
+    e.stopPropagation();
+    menu.classList.toggle('active');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!menu.contains(e.target) && !button.contains(e.target)) {
+      menu.classList.remove('active');
+    }
+  });
+}
 
 // ----------- Vùng gọi biến --------------
 document.addEventListener("DOMContentLoaded", () => {
@@ -603,20 +621,6 @@ document.addEventListener("DOMContentLoaded", () => {
         closeOnEsc: true,
         behavior: "toggle"
       },
-
-      {
-        trigger: ".product-tab__button",
-        behavior: "activate",
-        groupSelector: ".product-tab__button"
-      },
-
-      {
-        trigger: ".table-heading__top",
-        target: ".table-heading__body",
-        closeOnOutside: true,
-        behavior: "toggle"
-      },
-
       {
         trigger: "#menuMobileButton",
         target: ".menu-list__mobile",
@@ -624,49 +628,9 @@ document.addEventListener("DOMContentLoaded", () => {
         closeOnOutside: true,
         behavior: "toggle"
       },
-      {
-        trigger: ".review-filter button",
-        behavior: "activate",
-        groupSelector: ".review-filter button",
-        activeClass: "active"
-      },
-      {
-        trigger: ".header-function__blog",
-        target: ".header-newsandknowledge__content",
-        activeClass: "active",
-        closeOnOutside: true
-      },
-      {
-        trigger: ".branch",
-        behavior: "activate",
-        groupSelector: ".branch",
-        activeClass: "active",
-        onActiveChange(isActive, trigger) {
-          if (!isActive) return;
-          const lat = trigger.dataset.lat;
-          const lng = trigger.dataset.lng;
-          const mapFrame = document.getElementById("mapFrame");
-          if (mapFrame && lat && lng) {
-            mapFrame.style.transition = "opacity 0.25s ease";
-            mapFrame.style.opacity = 0;
-            setTimeout(() => {
-              mapFrame.src = `https://www.google.com/maps?q=${lat},${lng}&hl=vi&z=14&output=embed`;
-              mapFrame.onload = () => { mapFrame.style.opacity = 1; };
-            }, 180);
-          }
-        }
-      },
-      {
-        trigger: ".intro-slide__img img, .intro-slide__folderImage img", 
-        target: ".gallery-section",      
-        activeClass: "active",           
-        closeBtn: ".gallery-section .btn-close", 
-        closeOnOutside: true,            
-        overlayCloses: true,             
-        closeOnEsc: true,                 
-      }
-      // ... thêm config khác theo cùng mẫu ...
     ]);
+    // thực thi bật tắt menu
+    toggleMenu('.menu-container__bar', '.menu-list__table');
   });
 });
 

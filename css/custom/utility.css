@@ -2,6 +2,9 @@
 .bg-secondary { background-color: var(--secondary-color);}
 .bg-white { background-color: var(--white-color);}
 .bg-blue-white { background-color: var(--white-blue);}
+.bg-gray-color { background-color: var(--gray-color);}
+
+.text-color-white{ color: var(--white-color);}
 
 .flex { display: flex; }
 .flex-col {flex-direction: column;}
@@ -15,6 +18,7 @@
 .italic { font-style: italic; }
 
 .text-center { text-align: center; }
+.text-header-size{ font-size: 38px;}
 .pos-rel { position: relative; };
 .pos-abs { position: absolute; };
 .pos-fixed { position: fixed; };

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATISHA</title>
+    <title>Digitrust</title>
     <link rel="icon" type="image/png" href="./img/logo/logo-menu.png">
     <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
@@ -23,94 +23,119 @@
                 <a href="#" class="nav-bar__item">Liên hệ</a>
             </div>
         </section>
-        <section class="flex bg-white container-f contact-top__container">
-            <div class="container-l flex flex-col product-title center-ver">
-                <h2>Thông tin liên hệ</h2>
-                <img src="./img/icon/Vector.webp" alt="">
-                <div class="flex contact-info__container">
-                    <div class="flex center-ver contact-info__content">
-                        <img src="./img/icon/Phone-green.svg" alt="">
-                        <b>097 107 7678 - 0918 240 739</b>
+        <section class="container-f container-padding">
+            <div class="container-l flex flex-col">
+                <h1 class="text-center text-header-size">LIÊN HỆ</h1>
+                <div class="flex contact__container">
+                    <div class="flex flex-col contact__item">
+                        <h2>Thông tin liên hệ</h2>
+                        <div class="flex contact__content center-ver">
+                            <img class="contact__icon" src="./img/icon/contact-location.png" alt="">
+                            <div class="contact__info flex flex-col">
+                                <b>Văn phòng</b>
+                                <p>341 A Lê Trọng Tấn, Phường Sơn Kỳ, quận Tân Phú, thành phố Hồ Chí minh</p>
+                            </div>
+                        </div>
+                        <div class="flex contact__content center-ver">
+                            <img class="contact__icon" src="./img/icon/contact-phone.png" alt="">
+                            <div class="contact__info flex flex-col">
+                                <b>Điện thoại</b>
+                                <p>( +84.24) 6268 0611</p>
+                            </div>
+                        </div>
+                        <div class="flex contact__content center-ver">
+                            <img class="contact__icon" src="./img/icon/contact-phone.png" alt="">
+                            <div class="contact__info flex flex-col">
+                                <b>Di động</b>
+                                <p>0973 907 018 - 0777 702 117 - 0903 935 506</p>
+                            </div>
+                        </div>
+                        <div class="flex contact__content center-ver">
+                            <img class="contact__icon" src="./img/icon/contact-globe.png" alt="">
+                            <div class="contact__info flex flex-col">
+                                <b>Website</b>
+                                <p>http://digitaltrust.com</p>
+                            </div>
+                        </div>
+                        <div class="flex contact__social">
+                            <a href="#">
+                                <img src="./img/icon/icon-f.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./img/icon/icon-zalo.png" alt="">
+                            </a>
+                        </div>
+                        <img src="./img/icon/contact-us.png" alt="">
                     </div>
-                    <div class="flex center-ver contact-info__content">
-                        <img src="./img/icon/envelope-green.svg" alt="">
-                        <b>jansatisha@gmail.com</b>
+                    <div class="flex flex-col contact__item">
+                        <h2>Gửi yêu cầu về chúng tôi</h2>
+                        <form class="contact-form flex flex-col">
+                            <div class="form-row flex">
+                                <div class="form-group flex flex-col">
+                                    <label>Họ và tên <span>*</span></label>
+                                    <input type="text" name="full_name" required>
+                                </div>
+
+                                <div class="form-group flex flex-col">
+                                    <label>Email Doanh nghiệp</label>
+                                    <input type="email" name="email">
+                                </div>
+                            </div>
+                            <div class="form-row flex">
+                                <div class="form-group flex flex-col">
+                                    <label>Số điện thoại <span>*</span></label>
+                                    <input type="tel" name="phone" required>
+                                </div>
+
+                                <div class="form-group flex flex-col">
+                                    <label>Tên công ty</label>
+                                    <input type="text" name="company">
+                                </div>
+                            </div>
+                            <div class="form-row flex">
+                                <div class="form-group flex flex-col">
+                                    <label>Dịch vụ quan tâm <span>*</span></label>
+                                    <select name="service" required>
+                                        <option value="">Tư vấn dịch vụ</option>
+                                        <option value="ssl">SSL Certificates</option>
+                                        <option value="cloud">Cloud Server</option>
+                                        <option value="email">Email doanh nghiệp</option>
+                                        <option value="other">Khác</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group flex flex-col">
+                                    <label>Ngân sách dự kiến <span>*</span></label>
+                                    <input type="text" name="budget" required>
+                                </div>
+                            </div>
+                            <div class="form-group flex flex-col">
+                                <label>Mô tả nhu cầu của bạn <span>*</span></label>
+                                <textarea name="message" rows="4" required></textarea>
+                            </div>
+                            <div class="form-group captcha">
+                                <!-- placeholder reCAPTCHA -->
+                                <div class="recaptcha-box">
+                                    I'm not a robot
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <button type="submit" class="btn-submit">
+                                    Gửi yêu cầu tư vấn
+                                </button>
+                            </div>
+
+                        </form>
                     </div>
                 </div>
+
             </div>
         </section>
-        <section class="flex bg-white container-f contact-top__container">
-            <div class="container-l flex flex-col product-title center-ver">
-                <h3>Đặt hàng tại đây</h3>
-                <img src="./img/icon/Vector.webp" alt="">
-                <div class="flex contact-info__container">
-                    <div class="flex center-ver contact-info__content">
-                        <img src="./img/icon/globe.svg" alt="">
-                        <a target="_blank" href="https://wellbe.vn/">wellbe.vn</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="container-f flex flex-col bg-gray advise-container ">
-            <div class="container-xs bg-white flex advise-contact" data-include="./component/healthconsulting.html">
-            </div>
-        </section>
-        <section class="flex flex-col  bg-white container-f contact-bottom__container">
-            <div class="container-l flex flex-col product-title center-ver">
-                <h3>Trở thành đối tác của kombucha</h3>
-                <img src="./img/icon/Vector.webp" alt="">
-                <p class="des-contact">Jan’s Atisha mong muốn được cùng bạn phát triển một sự nghiệp bền vững và cùng
-                    nhau chia sẽ giữa
-                    trách
-                    nhiệm cộng đồng, sự cam kết và lòng tận tâm trong môi trường nhiệt huyết, yêu thương.</p>
-                <div class="flex center-ver call-info">
-                    <img src="./img/icon/Phone-green.svg" alt="">
-                    <b>097 107 7678 - 0918 240 739</b>
-                </div>
-            </div>
-            <div class="container-m flex map-container">
-                <div class="flex flex-col map-branch">
-                    <h3 class="map-branch__title">Chi nhánh</h3>
-                    <div class="flex flex-col branch-list">
-                        <div class="branch active" data-lat="10.762622" data-lng="106.660172">
-                            <h4>Chi nhánh TP.HCM</h4>
-                            <p>123 Lê Lợi, Q.1, TP.HCM</p>
-                            <p>📞 0909 000 111</p>
-                        </div>
-
-                        <div class="branch" data-lat="21.027763" data-lng="105.834160">
-                            <h4>Chi nhánh Hà Nội</h4>
-                            <p>456 Tràng Tiền, Hoàn Kiếm, Hà Nội</p>
-                            <p>📞 0909 000 222</p>
-                        </div>
-
-                        <div class="branch" data-lat="16.047079" data-lng="108.206230">
-                            <h4>Chi nhánh Đà Nẵng</h4>
-                            <p>789 Bạch Đằng, Hải Châu, Đà Nẵng</p>
-                            <p>📞 0909 000 333</p>
-                        </div>
-                        <div class="branch" data-lat="10.762622" data-lng="106.660172">
-                            <h4>Chi nhánh TP.HCM</h4>
-                            <p>123 Lê Lợi, Q.1, TP.HCM</p>
-                            <p>📞 0909 000 111</p>
-                        </div>
-
-                        <div class="branch" data-lat="21.027763" data-lng="105.834160">
-                            <h4>Chi nhánh Hà Nội</h4>
-                            <p>456 Tràng Tiền, Hoàn Kiếm, Hà Nội</p>
-                            <p>📞 0909 000 222</p>
-                        </div>
-
-                        <div class="branch" data-lat="16.047079" data-lng="108.206230">
-                            <h4>Chi nhánh Đà Nẵng</h4>
-                            <p>789 Bạch Đằng, Hải Châu, Đà Nẵng</p>
-                            <p>📞 0909 000 333</p>
-                        </div>
-                    </div>
-                </div>
+        <section class="flex flex-col  bg-white container-f container-padding">
+            <div class="container-l flex map-container">
                 <div class="flex map-content">
                     <iframe id="mapFrame" width="100%" height="100%" frameborder="0" style="border:0;"
-                        src="https://www.google.com/maps?q=10.762622,106.660172&amp;hl=vi&amp;z=14&amp;output=embed"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.0455992845395!2d106.61721291199781!3d10.807819589298456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752be5ae3a5367%3A0x28e69adff6a448ae!2zMzQxQSBMw6ogVHLhu41uZyBU4bqlbiwgU8ahbiBL4buzLCBUw6JuIFBow7osIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCA3MDAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1770437711292!5m2!1svi!2s"
                         allowfullscreen="">
                     </iframe>
                 </div>
