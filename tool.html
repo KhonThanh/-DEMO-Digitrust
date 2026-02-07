@@ -24,70 +24,96 @@
             </div>
         </section>
         <section class="container-f container-padding">
-            <div class="flex container-m blog-content__container">
-                <div class="blog-content__left flex flex-col">
-                    <h1>Cách cài đặt chứng chỉ SSL trên cPanel</h1>
-                    <p><strong>Cập nhật lần cuối:</strong> 25/10/2023</p>
-                    <p>
-                        Digitrust cung cấp bài viết hướng dẫn chi tiết cách cài đặt chứng chỉ SSL trên cPanel.
-                        Với hướng dẫn này, bạn có thể tự cài đặt chứng chỉ SSL cho website của mình
-                        một cách dễ dàng và nhanh chóng.
-                    </p>
-                    <h2>Điều kiện cần chuẩn bị (Prerequisites)</h2>
-                    <ul>
-                        <li>Bạn đã mua hoặc được cấp chứng chỉ SSL hợp lệ</li>
-                        <li>Bạn có quyền truy cập vào cPanel hosting</li>
-                        <li>Website đã trỏ domain về hosting</li>
-                        <li>
-                            Bạn đã tạo CSR (Certificate Signing Request) và nhận được bộ file SSL
-                            từ nhà cung cấp
-                        </li>
-                    </ul>
-                    <h2>Hướng dẫn cài đặt SSL từng bước</h2>
-                    <h3>Bước 1: Đăng nhập vào cPanel</h3>
-                    <p>
-                        Đăng nhập vào tài khoản cPanel của bạn thông qua đường dẫn
-                        do nhà cung cấp hosting cung cấp.
-                    </p>
-                    <h3>Bước 2: Truy cập mục SSL/TLS</h3>
-                    <p>
-                        Trong giao diện cPanel, tìm và chọn mục SSL/TLS.
-                    </p>
-                    <h3>Bước 3: Cài đặt chứng chỉ SSL</h3>
-                    <ul>
-                        <li>Chọn Manage SSL sites (hoặc “Install and Manage SSL for your site”)</li>
-                        <li>Tại phần Domain, chọn tên miền cần cài SSL</li>
-                        <li>Dán nội dung:</li>
-                        <ul>
-                            <li>Certificate (CRT)</li>
-                            <li>Private Key</li>
-                            <li>Certificate Authority Bundle (CABUNDLE) (nếu có)</li>
-                        </ul>
-                    </ul>
-                    <h3>Bước 4: Cài đặt chứng chỉ</h3>
-                    <p>
-                        Sau khi điền đầy đủ thông tin, nhấn Install Certificate
-                        để hoàn tất quá trình cài đặt.
-                    </p>
-                    <h3>Bước 5: Kiểm tra SSL</h3>
-                    <p>Sau khi cài đặt xong:</p>
-                    <ul>
-                        <li>Truy cập website bằng https://</li>
-                        <li>Kiểm tra biểu tượng ổ khóa trên trình duyệt</li>
-                        <li>Có thể sử dụng công cụ SSL Checker để kiểm tra lại</li>
-                    </ul>
-                    <h3>Hoàn tất</h3>
-                    <p>
-                        Nếu SSL được cài đặt đúng, website của bạn sẽ hiển thị kết nối
-                        bảo mật HTTPS và không còn cảnh báo bảo mật trên trình duyệt.
-                    </p>
+            <div class="container-l flex flex-col tool__container">
+                <h1 class="text-header-size">Công cụ & hướng dẫn kỹ thuật</h1>
+                <div class="tool-guide__content flex flex-wrap">
+                    <div class="tool-guide__item flex flex-col">
+                        <div class="tool-item__image">
+                            <img src="./img/icon/CSR.png" alt="">
+                        </div>
+                        <h5>Tạo mã CSR</h5>
+                        <p>Tạo mã CSR nhanh chóng để gửi yêu cầu cấp chứng chỉ số SSL.</p>
+                        <a class="tool-btn btn-active flex center-hor">
+                            truy cập công cụ của hãng
+                        </a>
+                        <a class="tool-btn flex center-hor">
+                            xem hướng dẫn sử dụng
+                        </a>
+                    </div>
+                    <div class="tool-guide__item flex flex-col">
+                        <div class="tool-item__image">
+                            <img src="./img/icon/CSR.png" alt="">
+                        </div>
+                        <h5>Tạo mã CSR</h5>
+                        <p>Tạo mã CSR nhanh chóng để gửi yêu cầu cấp chứng chỉ số SSL.</p>
+                        <a class="tool-btn btn-active flex center-hor">
+                            truy cập công cụ của hãng
+                        </a>
+                        <a class="tool-btn flex center-hor">
+                            xem hướng dẫn sử dụng
+                        </a>
+                    </div>
+                    <div class="tool-guide__item flex flex-col">
+                        <div class="tool-item__image">
+                            <img src="./img/icon/CSR.png" alt="">
+                        </div>
+                        <h5>Tạo mã CSR</h5>
+                        <p>Tạo mã CSR nhanh chóng để gửi yêu cầu cấp chứng chỉ số SSL.</p>
+                        <a class="tool-btn btn-active flex center-hor">
+                            truy cập công cụ của hãng
+                        </a>
+                        <a class="tool-btn flex center-hor">
+                            xem hướng dẫn sử dụng
+                        </a>
+                    </div>
+                    <div class="tool-guide__item flex flex-col">
+                        <div class="tool-item__image">
+                            <img src="./img/icon/CSR.png" alt="">
+                        </div>
+                        <h5>Tạo mã CSR</h5>
+                        <p>Tạo mã CSR nhanh chóng để gửi yêu cầu cấp chứng chỉ số SSL.</p>
+                        <a class="tool-btn btn-active flex center-hor">
+                            truy cập công cụ của hãng
+                        </a>
+                        <a class="tool-btn flex center-hor">
+                            xem hướng dẫn sử dụng
+                        </a>
+                    </div>
+                    <div class="tool-guide__item flex flex-col">
+                        <div class="tool-item__image">
+                            <img src="./img/icon/CSR.png" alt="">
+                        </div>
+                        <h5>Tạo mã CSR</h5>
+                        <p>Tạo mã CSR nhanh chóng để gửi yêu cầu cấp chứng chỉ số SSL.</p>
+                        <a class="tool-btn btn-active flex center-hor">
+                            truy cập công cụ của hãng
+                        </a>
+                        <a class="tool-btn flex center-hor">
+                            xem hướng dẫn sử dụng
+                        </a>
+                    </div>
+                    <div class="tool-guide__item flex flex-col">
+                        <div class="tool-item__image">
+                            <img src="./img/icon/CSR.png" alt="">
+                        </div>
+                        <h5>Tạo mã CSR</h5>
+                        <p>Tạo mã CSR nhanh chóng để gửi yêu cầu cấp chứng chỉ số SSL.</p>
+                        <a class="tool-btn btn-active flex center-hor">
+                            truy cập công cụ của hãng
+                        </a>
+                        <a class="tool-btn flex center-hor">
+                            xem hướng dẫn sử dụng
+                        </a>
+                    </div>
                 </div>
-                <div class="blog-content__right flex flex-col">
-                    <h2>Bài viết mới nhất</h2>
-                    <a>Hướng dẫn tạo CSR trên cPanel</a>
-                    <a>Tạo mã CSR trên cPanel</a>
-                    <a>Khắc phục lỗi cài đặt SSL</a>
-                    <a>Xử lý lỗi SSL thường gặp trên cPanel</a>
+                <h2>Hướng dẫn kỹ thuật phổ biến</h2>
+                <div class="link-guide__container flex flex-wrap">
+                    <a href="#">Hướng dẫn kỹ thuật phổ biến</a>
+                    <a href="#">Hướng dẫn kỹ thuật phổ biến</a>
+                    <a href="#">Hướng dẫn kỹ thuật phổ biến</a>
+                    <a href="#">Hướng dẫn kỹ thuật phổ biến</a>
+                    <a href="#">Hướng dẫn kỹ thuật phổ biến</a>
+                    <a href="#">Hướng dẫn kỹ thuật phổ biến</a>
                 </div>
             </div>
         </section>
