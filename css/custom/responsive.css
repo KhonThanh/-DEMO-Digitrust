@@ -176,6 +176,10 @@
     .feature-card {
         padding: 10px;
     }
+
+    .benefit-item{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 551px) {

@@ -415,15 +415,16 @@
     margin-top: 30px;
 }
 
+.email-benefits__title,
 .link-guide__container a,
 .help-category-list,
 .reason-list,
 .infrastructure-services,
-.blog-content__container ,
+.blog-content__container,
 .form-row,
 .contact__social,
 .contact__container,
-.faq-list ,
+.faq-list,
 .related-list,
 .related-item__container,
 .section-related__container,
@@ -513,6 +514,46 @@
     min-height: 331px;
     justify-content: space-between;
 }
+
+/* css Email theo tên miền riêng */
+.email-benefits {
+    gap: 30px;
+}
+
+.benefit-item {
+    padding: 10px 20px;
+    gap: 10px;
+    width: calc(100% / 2 - 30px);
+}
+
+.email-table{
+    height: fit-content;
+}
+
+.email-table th,
+.email-table td{
+    text-align: center;
+    padding: 20px 5px;
+}
+
+.email-table th:not(:nth-child(1)) {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.email-table .btn-primary{
+    color: var(--white-color);
+}
+
+.email-table__container{
+    gap: 30px;
+}
+
+.benefit-icon {}
+
+.benefit-content {}
+
+.flex-col {}
 
 /* css hệ thống hạ tầng */
 .infrastructure-system__container {}
@@ -776,8 +817,6 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
-
-.btn-primary {}
 
 .faq-answer {
     display: none;
@@ -1134,11 +1173,19 @@ footer {
     -webkit-overflow-scrolling: touch;
 }
 
+.email-table,
 .domain-table {
     width: 100%;
-    min-width: 560px;
     border-collapse: collapse;
     background: var(--white-color);
+}
+
+.email-table {
+        min-width: 1414px; 
+}
+
+.domain-table {
+    min-width: 560px; 
 }
 
 .domain-table th {
