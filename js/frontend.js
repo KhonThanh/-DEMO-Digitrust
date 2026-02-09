@@ -579,6 +579,21 @@ function initMobileMenuSimple() {
   });
 
 }
+
+// js chạy thanh bar ở trang giới thiệu
+function runCoreProgress() {
+  document.querySelectorAll(".progress-bar").forEach(bar => {
+    const percent = bar.dataset.percent || 0;
+
+    bar.style.transition = "none";
+    bar.style.width = "0";
+
+    requestAnimationFrame(() => {
+      bar.style.transition = "width 1.2s ease";
+      bar.style.width = percent + "%";
+    });
+  });
+}
 // ----------- Vùng gọi biến --------------
 document.addEventListener("DOMContentLoaded", () => {
   includeHTML(() => {
@@ -713,6 +728,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // thực thi bật tắt menu
     toggleMenu('.menu-container__bar', '.m-menu');
     initMobileMenuSimple()
+    runCoreProgress()
   });
 });
 

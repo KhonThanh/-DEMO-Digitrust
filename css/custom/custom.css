@@ -207,7 +207,7 @@
 }
 
 .m-submenu__levelthree,
-.m-submenu{
+.m-submenu {
     height: 0px;
     visibility: hidden;
     opacity: 0;
@@ -233,7 +233,7 @@
 /* active thì mở */
 .m-submenu__item.is-active>.m-submenu__levelthree,
 .m-menu__item.is-active>.m-submenu {
-     height: fit-content;
+    height: fit-content;
     visibility: visible;
     opacity: 1;
 }
@@ -421,6 +421,12 @@
     margin-top: 30px;
 }
 
+.core-values,
+.partner-certifications__container,
+.partner-certifications,
+.timeline-right,
+.about-timeline__content,
+.about-timeline,
 .email-benefits__title,
 .link-guide__container a,
 .help-category-list,
@@ -558,6 +564,72 @@
 .benefit-icon {}
 
 .benefit-content {}
+
+/* css trang giới thiệu chung */
+.timeline-right h4,
+.timeline-left h4{
+    font-size: calc(var(--font-size-base) + 8px);
+}
+
+.timeline-right,
+.timeline-left {
+    width:  calc(100% / 2 - 20px);
+}
+
+.timeline-left {
+    gap: 20px;
+}
+
+.timeline-left img{
+    max-width: 259px;
+    aspect-ratio: 259 / 227;
+    object-fit: contain;
+    object-position: center;
+}
+
+.timeline-item__content {
+    justify-content: space-between;
+}
+
+.partner-item{
+    width: calc(100% / 4 - 20px);
+}
+
+.partner-item img{
+    aspect-ratio: 235 / 79;
+    object-fit: contain;
+    object-position: center;
+}
+
+.core-left img{
+    max-width: 84px;
+    object-position: center;
+    object-fit: contain;
+}
+
+.core-left,
+.core-right{
+    width: calc(100% / 2 - 20px);
+    gap: 20px;
+}
+
+.core-left__content{
+    gap: 20px;
+}
+
+.core-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.progress-bar {
+  width: 0;
+  height: 15px;
+  background: var(--primary-color);
+  border-radius: 999px;
+  transition: width 1.2s ease;
+}
 
 /* css hệ thống hạ tầng */
 .infrastructure-system__container {}
