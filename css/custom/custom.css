@@ -135,9 +135,9 @@
     opacity: 1;
 }
 
-.menu-list__table.active {
+.m-menu.active {
     max-height: 2000px;
-    padding: 20px 0px;
+    padding: 20px 20px;
     opacity: 1;
 }
 
@@ -149,10 +149,13 @@
     position: relative;
 }
 
+.menu-leveltwo__container>a::after {
+    content: " ▸";
+}
+
+.menu-list__leveltwo,
 .menu-list {
     position: absolute;
-    top: 110%;
-    left: 0;
     min-width: 180px;
     background: var(--white-color);
     border-radius: 10px;
@@ -164,12 +167,31 @@
     z-index: 99;
 }
 
+.menu-list__leveltwo {
+    left: 98%;
+    top: 0px;
+}
+
+.menu-list__leveltwo a {
+    padding: 10px;
+    border-bottom: 1px solid transparent;
+}
+
+.menu-list__leveltwo a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.menu-list {
+    top: 110%;
+    left: 0;
+}
+
 .header-container {
     position: relative;
     gap: 10px;
 }
 
-.menu-list__table {
+.m-menu {
     position: absolute;
     width: 80vw;
     height: 90vh;
@@ -184,10 +206,45 @@
     transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
 }
 
+.m-submenu__levelthree,
+.m-submenu{
+    height: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
 
+.m-menu__item {
+    align-items: end;
+}
+
+.m-submenu__levelthree,
+.m-submenu {
+    padding-right: 20px;
+}
+
+.m-submenu__item a,
+.m-menu__root a {
+    text-align: right;
+    color: var(--white-color);
+    padding: 10px;
+}
+
+/* active thì mở */
+.m-submenu__item.is-active>.m-submenu__levelthree,
+.m-menu__item.is-active>.m-submenu {
+     height: fit-content;
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu-leveltwo__container:hover .menu-list__leveltwo,
 .menu-container__item:hover .menu-list {
     opacity: 1;
     visibility: visible;
+}
+
+.menu-container__item:hover .menu-list {
     transform: translateY(0);
 }
 
@@ -195,14 +252,17 @@
     border-bottom: 1px solid var(--secondary-color);
 }
 
-.menu-list a {
-    transition: all 0.2s ease;
-    border-bottom: 1px solid transparent;
+.menu-leveltwo__container {
     padding: 10px;
 }
 
-.menu-list a:hover {
-    border-bottom: 1px solid var(--secondary-color);
+.menu-list__leveltwo,
+.menu-leveltwo__container {
+    border-bottom: 1px solid transparent;
+}
+
+.menu-leveltwo__container:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 .drop-down::after {
@@ -295,60 +355,6 @@
     width: 100%;
     height: auto;
     max-width: 32px;
-}
-
-/* css menu mobile */
-.menu-mobile__container {
-    position: fixed;
-    bottom: 0;
-    z-index: 2;
-    gap: 5px;
-    width: 100vw;
-    display: none;
-}
-
-.menu-mobile__item img {
-    max-height: 19px;
-    width: 100%;
-    height: auto;
-}
-
-.menu-mobile__item {
-    padding: 10px;
-    gap: 5px;
-}
-
-.menu-mobile__item p {
-    font-size: calc(var(--font-size-base) / 2);
-    font-weight: bold;
-    color: var(--black-color);
-    opacity: 0.4;
-}
-
-.menu-list__mobile {
-    position: absolute;
-    right: 0;
-    bottom: 100%;
-    width: 100vw;
-    padding: 10px 0;
-    background: #fff;
-    min-height: 0;
-    height: 0px;
-    opacity: 0;
-    transform: translateY(-10px);
-    overflow: hidden;
-    transition: max-height 0.4s ease,
-        opacity 0.3s ease,
-        transform 0.3s ease;
-    z-index: 999;
-    border-radius: 0 0 12px 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.menu-list__mobile.active {
-    min-height: 85vh;
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .btn-submit {
@@ -526,34 +532,32 @@
     width: calc(100% / 2 - 30px);
 }
 
-.email-table{
+.email-table {
     height: fit-content;
 }
 
 .email-table th,
-.email-table td{
+.email-table td {
     text-align: center;
     padding: 20px 5px;
 }
 
 .email-table th:not(:nth-child(1)) {
-  background-color: var(--primary-color);
-  color: var(--white-color);
-}
-
-.email-table .btn-primary{
+    background-color: var(--primary-color);
     color: var(--white-color);
 }
 
-.email-table__container{
+.email-table .btn-primary {
+    color: var(--white-color);
+}
+
+.email-table__container {
     gap: 30px;
 }
 
 .benefit-icon {}
 
 .benefit-content {}
-
-.flex-col {}
 
 /* css hệ thống hạ tầng */
 .infrastructure-system__container {}
@@ -1187,11 +1191,11 @@ footer {
 }
 
 .email-table {
-        min-width: 1414px; 
+    min-width: 1414px;
 }
 
 .domain-table {
-    min-width: 560px; 
+    min-width: 560px;
 }
 
 .domain-table th {

@@ -532,6 +532,53 @@ function initScrollToTop(btnId = "btnToTop", showOffset = 1000) {
   });
 }
 
+// js menu con 
+function initMobileMenuSimple() {
+
+  // ===== LEVEL 1 =====
+  document.querySelectorAll(".m-menu__link").forEach(link => {
+    link.addEventListener("click", function (e) {
+      const currentItem = this.closest(".m-menu__item");
+      if (!currentItem) return;
+
+      e.preventDefault();
+
+      // tắt tất cả item khác
+      document.querySelectorAll(".m-menu__item.is-active").forEach(item => {
+        if (item !== currentItem) {
+          item.classList.remove("is-active");
+        }
+      });
+
+      // toggle item hiện tại
+      currentItem.classList.toggle("is-active");
+    });
+  });
+
+  // ===== LEVEL 2 =====
+  document.querySelectorAll(".m-submenu__item > a").forEach(link => {
+    link.addEventListener("click", function (e) {
+      const currentItem = this.closest(".m-submenu__item");
+      if (!currentItem) return;
+
+      e.preventDefault();
+
+      // tắt mấy thằng cùng level
+      const siblings = currentItem
+        .closest(".m-submenu")
+        .querySelectorAll(".m-submenu__item.is-active");
+
+      siblings.forEach(item => {
+        if (item !== currentItem) {
+          item.classList.remove("is-active");
+        }
+      });
+
+      currentItem.classList.toggle("is-active");
+    });
+  });
+
+}
 // ----------- Vùng gọi biến --------------
 document.addEventListener("DOMContentLoaded", () => {
   includeHTML(() => {
@@ -646,13 +693,6 @@ document.addEventListener("DOMContentLoaded", () => {
         behavior: "toggle"
       },
       {
-        trigger: "#menuMobileButton",
-        target: ".menu-list__mobile",
-        closeBtn: ".clone-menu__container",
-        closeOnOutside: true,
-        behavior: "toggle"
-      },
-      {
         trigger: ".js-faq-trigger",
         target: ".js-faq-target",
         activeClass: "active",
@@ -671,7 +711,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     ]);
     // thực thi bật tắt menu
-    toggleMenu('.menu-container__bar', '.menu-list__table');
+    toggleMenu('.menu-container__bar', '.m-menu');
+    initMobileMenuSimple()
   });
 });
 

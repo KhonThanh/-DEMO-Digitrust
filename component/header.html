@@ -6,25 +6,66 @@
         <div class="menu-container__item drop-down flex center-ver ">
             <a href="#">Giải pháp bảo mật ▾</a>
             <div class="menu-list flex flex-col">
-                <a href="#">Chứng chỉ Máy chủ SSL/TLS</a>
-                <a href="#">Bảo mật cấp cao</a>
-                <a href="#">Ký số & Định danh</a>
+                <div class="menu-leveltwo__container pos-rel">
+                    <a href="#">Chứng chỉ Máy chủ SSL/TLS</a>
+                    <div class="menu-list__leveltwo flex flex-col ">
+                        <a href="#">Standard SSL - OV</a>
+                        <a href="#">EV SSL ( Flagship Product )</a>
+                        <a href="#">Wildcard SSL</a>
+                        <a href="#">Multi-Domain SANs</a>
+                    </div>
+                </div>
+                <div class="menu-leveltwo__container pos-rel">
+                    <a href="#">Bảo mật cấp cao</a>
+                    <div class="menu-list__leveltwo flex flex-col ">
+                        <a href="#">Secure Site</a>
+                        <a href="#">Secure Site Pro ( Norton Seal + Maiware Scan )</a>
+                    </div>
+                </div>
+                <div class="menu-leveltwo__container pos-rel">
+                    <a href="#">Ký số & Định danh</a>
+                    <div class="menu-list__leveltwo flex flex-col ">
+                        <a href="#">Code Signing</a>
+                        <a href="#">Email & Doc Signing ( 3/MIME )</a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="menu-container__item drop-down flex center-ver ">
             <a href="#">Hạ tầng WEB ▾</a>
             <div class="menu-list flex flex-col">
-                <a href="#">Cloud Server / VPS </a>
-                <a href="#">Web Hosting</a>
-                <a href="#">Email Doanh Nghiệp</a>
-                <a href="#">Tên miền</a>
+                <div class="menu-leveltwo__container pos-rel">
+                    <a href="#">Cloud Server / VPS </a>
+                </div>
+                <div class="menu-leveltwo__container pos-rel">
+                    <a href="#">Web Hosting </a>
+                </div>
+                <div class="menu-leveltwo__container pos-rel">
+                    <a href="#">Email Doanh Nghiệp </a>
+                </div>
+                <div class="menu-leveltwo__container pos-rel">
+                    <a href="#">Tên miền </a>
+                </div>
             </div>
         </div>
         <div class="menu-container__item drop-down flex center-ver ">
             <a href="#">Hỗ trợ & công cụ ▾</a>
             <div class="menu-list flex flex-col">
-                <a href="#">Trung tâm trợ giúp</a>
-                <a href="#">Trang công cụ</a>
+                <div class="menu-leveltwo__container pos-rel">
+                    <a href="#">Trung tâm trợ giúp </a>
+                    <div class="menu-list__leveltwo flex flex-col ">
+                        <a href="#">Hướng dẫn cài đặt</a>
+                        <a href="#">Quy trình xác thực</a>
+                        <a href="#">Khắc phục lỗi</a>
+                    </div>
+                </div>
+                <div class="menu-leveltwo__container pos-rel">
+                    <a href="#">Trang công cụ</a>
+                    <div class="menu-list__leveltwo flex flex-col ">
+                        <a href="#">CSR Generator</a>
+                        <a href="#">CSR Checker</a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="menu-container__item drop-down flex center-ver ">
@@ -42,47 +83,74 @@
         <button class="menu-container__bar flex center-ver">
             <img src="./img/icon/bars.svg" alt="">
         </button>
-        <div class="menu-list__table flex flex-col">
-            <div class="menu-root">
-                <div class="menu-item flex-col flex">
-                    <a href="#">Giải pháp bảo mật ▾</a>
-                    <div class="menu-list flex flex-col">
-                        <a href="#">Chứng chỉ Máy chủ SSL/TLS</a>
-                        <a href="#">Bảo mật cấp cao</a>
-                        <a href="#">Ký số & Định danh</a>
+        <div class="m-menu flex flex-col">
+            <div class="m-menu__root">
+                <div class="m-menu__item flex flex-col">
+                    <a href="#" class="m-menu__link">Giải pháp bảo mật ▾</a>
+                    <div class="m-submenu flex flex-col">
+                        <div class="m-submenu__item flex flex-col">
+                            <a href="#">Chứng chỉ Máy chủ SSL/TLS ▾</a>
+                            <div class="m-submenu__levelthree flex flex-col">
+                                <a href="#">Standard SSL - OV</a>
+                                <a href="#">EV SSL ( Flagship Product )</a>
+                                <a href="#">Wildcard SSL</a>
+                                <a href="#">Multi-Domain SANs</a>
+                            </div>
+                        </div>
+
+                        <div class="m-submenu__item flex flex-col">
+                            <a href="#">Bảo mật cấp cao ▾</a>
+                            <div class="m-submenu__levelthree flex flex-col">
+                                <a href="#">Secure Site</a>
+                                <a href="#">Secure Site Pro ( Norton Seal + Malware Scan )</a>
+                            </div>
+                        </div>
+
+                        <div class="m-submenu__item flex flex-col">
+                            <a href="#">Ký số & Định danh ▾</a>
+                            <div class="m-submenu__levelthree flex flex-col">
+                                <a href="#">Code Signing</a>
+                                <a href="#">Email & Doc Signing ( S/MIME )</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="menu-item flex-col flex">
-                    <a href="#">Hạ tầng WEB ▾</a>
-                    <div class="menu-list flex flex-col">
-                        <a href="#">Cloud Server / VPS </a>
+                <div class="m-menu__item flex flex-col">
+                    <a href="#" class="m-menu__link">Hạ tầng WEB ▾</a>
+                    <div class="m-submenu flex flex-col">
+                        <a href="#">Cloud Server / VPS</a>
                         <a href="#">Web Hosting</a>
                         <a href="#">Email Doanh Nghiệp</a>
                         <a href="#">Tên miền</a>
                     </div>
                 </div>
-                <div class="menu-item flex-col flex">
-                    <a href="#">Hỗ trợ & công cụ ▾</a>
-                    <div class="menu-list flex flex-col">
-                        <a href="#">Trung tâm trợ giúp</a>
-                        <a href="#">Trang công cụ</a>
+                <div class="m-menu__item flex flex-col">
+                    <a href="#" class="m-menu__link">Hỗ trợ & công cụ ▾</a>
+
+                    <div class="m-submenu flex flex-col">
+                        <div class="m-submenu__item flex flex-col">
+                            <a href="#">Trung tâm trợ giúp ▾</a>
+                            <div class=" m-submenu__levelthree flex flex-col">
+                                <a href="#">Hướng dẫn cài đặt</a>
+                                <a href="#">Quy trình xác thực</a>
+                                <a href="#">Khắc phục lỗi</a>
+                            </div>
+                        </div>
+
+                        <div class="m-submenu__item flex flex-col">
+                            <a href="#">Trang công cụ ▾</a>
+                            <div class=" m-submenu__levelthree flex flex-col">
+                                <a href="#">CSR Generator</a>
+                                <a href="#">CSR Checker</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="menu-item flex-col flex">
-                    <a href="#">Về chúng tôi</a>
-                </div>
-                <div class="menu-item flex-col flex">
-                    <a href="#">Liên hệ</a>
-                </div>
-                <div class="menu-item flex-col flex">
-                    <a href="#">Báo giá</a>
-                </div>
-                <div class="menu-item flex-col flex">
-                    <a href="#">Đăng nhập</a>
-                </div>
-                <div class="menu-item flex-col flex">
-                    <a href="#">Đăng ký</a>
-                </div>
+                <div class="m-menu__item flex flex-col"><a href="#">Về chúng tôi</a></div>
+                <div class="m-menu__item flex flex-col"><a href="#">Liên hệ</a></div>
+                <div class="m-menu__item flex flex-col"><a href="#">Báo giá</a></div>
+                <div class="m-menu__item flex flex-col"><a href="#">Đăng nhập</a></div>
+                <div class="m-menu__item flex flex-col"><a href="#">Đăng ký</a></div>
             </div>
         </div>
     </div>
