@@ -656,15 +656,17 @@ document.addEventListener("DOMContentLoaded", () => {
         trigger: ".js-faq-trigger",
         target: ".js-faq-target",
         activeClass: "active",
-        behavior: "toggle",
-        groupSelector: ".faq-item",
+        behavior: "activate",
+        closeOnOutside: true,
         onActiveChange: function (isActive, trigger, target) {
-          // toggle class cho chính question để xoay icon
-          if (isActive) {
-            trigger.classList.add("active");
-          } else {
+          // nếu đang active mà bấm lại chính nó → đóng
+          if (isActive && trigger._justClicked) {
             trigger.classList.remove("active");
+            target && target.classList.remove("active");
           }
+
+          trigger._justClicked = true;
+          setTimeout(() => trigger._justClicked = false, 0);
         }
       }
     ]);

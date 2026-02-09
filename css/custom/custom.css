@@ -686,7 +686,9 @@
     font-weight: bold;
 }
 
-.product-actions {}
+.product-actions {
+    gap: 20px;
+}
 
 .btn-primary,
 .btn-outline {
@@ -1034,12 +1036,16 @@ footer {
 
 .help-center-title {}
 
-.help-center-search {}
+.help-center-search {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--black-color);
+}
 
 .search-input {
     width: 100%;
     min-height: 40px;
-    border-radius: 10px;
+    border: transparent;
 }
 
 .help-center-subtitle {}
