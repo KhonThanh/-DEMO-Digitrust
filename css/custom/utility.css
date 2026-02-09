@@ -3,6 +3,7 @@
 .bg-white { background-color: var(--white-color);}
 .bg-blue-white { background-color: var(--white-blue);}
 .bg-gray-color { background-color: var(--gray-color);}
+.bg-light-blue { background-color: var(--light-blue);}
 
 .text-color-white{ color: var(--white-color);}
 

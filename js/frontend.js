@@ -511,6 +511,27 @@ function toggleMenu(buttonSelector, menuSelector) {
   });
 }
 
+// js roll to top
+function initScrollToTop(btnId = "btnToTop", showOffset = 1000) {
+  const scrollBtn = document.getElementById(btnId);
+  if (!scrollBtn) return;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > showOffset) {
+      scrollBtn.classList.add("show");
+    } else {
+      scrollBtn.classList.remove("show");
+    }
+  });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+}
+
 // ----------- Vùng gọi biến --------------
 document.addEventListener("DOMContentLoaded", () => {
   includeHTML(() => {
@@ -583,6 +604,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
+    // 🟡 roll to the top
+    initScrollToTop();
+
     // 🔵 Popup gallery (for–nav)
     initSlickSlider({
       mainSelector: ".gallery-slider-for",
@@ -628,6 +652,21 @@ document.addEventListener("DOMContentLoaded", () => {
         closeOnOutside: true,
         behavior: "toggle"
       },
+      {
+        trigger: ".js-faq-trigger",
+        target: ".js-faq-target",
+        activeClass: "active",
+        behavior: "toggle",
+        groupSelector: ".faq-item",
+        onActiveChange: function (isActive, trigger, target) {
+          // toggle class cho chính question để xoay icon
+          if (isActive) {
+            trigger.classList.add("active");
+          } else {
+            trigger.classList.remove("active");
+          }
+        }
+      }
     ]);
     // thực thi bật tắt menu
     toggleMenu('.menu-container__bar', '.menu-list__table');
