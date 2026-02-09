@@ -415,6 +415,30 @@
     margin-top: 30px;
 }
 
+.link-guide__container a,
+.help-category-list,
+.reason-list,
+.infrastructure-services,
+.blog-content__container ,
+.form-row,
+.contact__social,
+.contact__container,
+.faq-list ,
+.related-list,
+.related-item__container,
+.section-related__container,
+.section-how-to-buy__container,
+.feature-card-list,
+.product-overview__container,
+.product-overview,
+.product-highlight,
+.product-hero-content,
+.all-product__content,
+.why-choose-us__item:nth-child(2),
+.why-choose-us__container,
+.infrastructure-system__content,
+.feature-product__list li,
+.tool-guide__content,
 .feature-product__container {
     gap: 20px;
 }
@@ -476,9 +500,6 @@
     color: var(--black-color);
 }
 
-.feature-product__list li {
-    gap: 20px;
-}
 
 .feature-product__list img {
     max-width: 11px;
@@ -504,7 +525,6 @@
 
 .infrastructure-system__content {
     margin-top: 30px;
-    gap: 20px;
 }
 
 .infrastructure-system__item {
@@ -534,9 +554,6 @@
 }
 
 /* css vì sao chọn chúng tôi */
-.why-choose-us__container {
-    gap: 20px;
-}
 
 .why-choose-us__item {
     width: calc(100% / 2 - 20px);
@@ -544,7 +561,6 @@
 
 .why-choose-us__item:nth-child(2) {
     padding: 20px;
-    gap: 20px;
 }
 
 .why-choose-us__item h5 {
@@ -575,10 +591,6 @@
     gap: 10px;
 }
 
-.all-product__content {
-    gap: 20px;
-}
-
 .product-item {
     width: calc(100% / 6 - 20px);
     background-color: var(--white-color);
@@ -606,10 +618,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
-}
-
-.product-hero-content {
-    gap: 20px;
 }
 
 .product-title {
@@ -677,14 +685,9 @@
     color: var(--black-color);
 }
 
-.product-overview__container {
-    gap: 20px;
-}
-
 .product-overview,
 .product-highlight {
     width: calc(100% / 2 - 20px);
-    gap: 20px;
 }
 
 .product-overview h3,
@@ -717,9 +720,6 @@
     font-size: calc(var(--font-size-base) - 2px);
 }
 
-.feature-card-list {
-    gap: 20px;
-}
 
 .feature-card {
     padding: 30px 60px;
@@ -752,17 +752,7 @@
     background: var(--white-color);
 }
 
-.related-item__container,
-.section-related__container,
-.section-how-to-buy__container {
-    gap: 20px;
-}
-
 .section-title {}
-
-.related-list {
-    gap: 20px;
-}
 
 .related-item__container {
     width: calc(100% / 2 - 20px);
@@ -825,19 +815,10 @@
     border: 1px solid var(--white-blue);
 }
 
-.faq-list {
-    gap: 20px;
-}
-
 /* css trang liên hệ */
 .map-content {
     width: 100%;
     aspect-ratio: 16 / 5;
-}
-
-.contact__social,
-.contact__container {
-    gap: 20px;
 }
 
 .contact__content {
@@ -863,10 +844,6 @@
     border-radius: 10px;
     border: 1px solid var(--black-color);
     gap: 10px;
-}
-
-.form-row {
-    gap: 20px;
 }
 
 .form-group {
@@ -897,10 +874,6 @@
 .recaptcha-box {}
 
 /* css blog */
-.blog-content__container {
-    gap: 20px;
-}
-
 .blog-content__right,
 .blog-content__left {
     gap: 10px;
@@ -967,10 +940,6 @@ footer {
 }
 
 /* css cơ sở hạ tầng */
-.infrastructure-services {
-    gap: 20px;
-}
-
 .service-item {
     width: calc(100% / 4 - 15px);
     padding: 30px;
@@ -996,10 +965,6 @@ footer {
 }
 
 .section-title {}
-
-.reason-list {
-    gap: 20px;
-}
 
 .reason-item {
     width: calc(100% / 4 - 15px);
@@ -1040,10 +1005,6 @@ footer {
 
 .help-center-subtitle {}
 
-.help-category-list {
-    gap: 20px;
-}
-
 .help-category-item {
     gap: 10px;
     padding: 20px;
@@ -1079,10 +1040,6 @@ footer {
 /* css tool */
 .tool__container {
     gap: 30px;
-}
-
-.tool-guide__content {
-    gap: 20px;
 }
 
 .tool-guide__item {
@@ -1136,7 +1093,6 @@ footer {
     margin-bottom: 10px;
     width: calc(100% / 3 - 20px);
     color: var(--primary-color);
-    gap: 20px;
 }
 
 /* css domain */
