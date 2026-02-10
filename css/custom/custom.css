@@ -421,6 +421,8 @@
     margin-top: 30px;
 }
 
+.tech-item,
+.hosting-tech,
 .team-section,
 .team-list,
 .team-card,
@@ -555,6 +557,8 @@
     height: fit-content;
 }
 
+.hosting-table th,
+.hosting-table td,
 .email-table th,
 .email-table td {
     text-align: center;
@@ -566,6 +570,7 @@
     color: var(--white-color);
 }
 
+.hosting-table .btn-primary,
 .email-table .btn-primary {
     color: var(--white-color);
 }
@@ -690,25 +695,25 @@
     padding: 20px;
 }
 
-.team-card h4{
+.team-card h4 {
     font-size: calc(var(--font-size-base) + 8px);
 }
 
-.team-card p{
+.team-card p {
     font-size: var(--font-size-base);
 }
 
-.team-avatar img
-.team-avatar {
+.team-avatar img .team-avatar {
     aspect-ratio: 1 / 1;
 }
 
-.team-avatar img{
+.team-avatar img {
     aspect-ratio: 1 / 1;
     object-fit: contain;
     object-position: center;
     border-radius: 10px;
 }
+
 .team-avatar {
     aspect-ratio: 1 / 1;
 }
@@ -750,6 +755,60 @@
 
 .infrastructure-system__item * {
     color: var(--white-color);
+}
+
+/* css website hosting tốc độ cao */
+.hosting-tech {}
+
+.tech-box__title {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.tech-box {
+    border-radius: 15px;
+    width: calc(100% / 2 - 20px);
+    cursor: pointer;
+}
+
+.table-scroll {
+    display: none;
+}
+
+.table-scroll.active {
+    display: block;
+}
+
+
+.tech-box.active .tech-box__title {
+    background-color: var(--primary-color);
+}
+
+.tech-box.active .tech-box__title h4 {
+    color: var(--white-color);
+}
+
+.tech-icons,
+.tech-box__title {
+    padding: 20px;
+}
+
+.tech-box,
+.tech-box__title {
+    border: 1px solid var(--primary-color);
+}
+
+.tech-icons {}
+
+.tech-item {
+    flex: 1 1 calc(100% / 2);
+}
+
+.tech-item img {
+    aspect-ratio: 1 / 1;
+    max-width: 110px;
+    object-position: center;
+    object-fit: contain;
 }
 
 /* css vì sao chọn chúng tôi */
@@ -931,15 +990,20 @@
     height: 100%;
 }
 
+.hosting-table,
 .tech-table {
     border: solid var(--white-blue);
     border-width: 2px 0px 0px 2px;
 }
 
+.hosting-table td,
 .tech-table td {
-    padding: 20px;
     border: solid var(--white-blue);
     border-width: 0px 2px 2px 0px;
+}
+
+.tech-table td {
+    padding: 20px;
 }
 
 .tech-table {
@@ -1340,6 +1404,7 @@ footer {
     background: var(--white-color);
 }
 
+.hosting-table,
 .email-table {
     min-width: 1414px;
 }

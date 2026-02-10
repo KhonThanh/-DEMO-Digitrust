@@ -594,6 +594,32 @@ function runCoreProgress() {
     });
   });
 }
+// js phần table trong email
+function initTechBoxToggle({
+  techBoxSelector = ".tech-box",
+  tableSelector = ".table-scroll",
+  activeClass = "active",
+} = {}) {
+  const techBoxes = document.querySelectorAll(techBoxSelector);
+  const tables = document.querySelectorAll(tableSelector);
+
+  if (!techBoxes.length || !tables.length) return;
+
+  techBoxes.forEach((box, index) => {
+    if (box.dataset._techBound === "true") return;
+    box.dataset._techBound = "true";
+
+    box.addEventListener("click", () => {
+      techBoxes.forEach(b => b.classList.remove(activeClass));
+      tables.forEach(t => t.classList.remove(activeClass));
+
+      box.classList.add(activeClass);
+      if (tables[index]) {
+        tables[index].classList.add(activeClass);
+      }
+    });
+  });
+}
 // ----------- Vùng gọi biến --------------
 document.addEventListener("DOMContentLoaded", () => {
   includeHTML(() => {
@@ -727,8 +753,9 @@ document.addEventListener("DOMContentLoaded", () => {
     ]);
     // thực thi bật tắt menu
     toggleMenu('.menu-container__bar', '.m-menu');
-    initMobileMenuSimple()
-    runCoreProgress()
+    initMobileMenuSimple();
+    runCoreProgress();
+    initTechBoxToggle();
   });
 });
 
