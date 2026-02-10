@@ -77,7 +77,9 @@
         width: 100%;
     }
 
-    .about-timeline__content {}
+    .value-card {
+        width: calc(100% / 2 - 20px);
+    }
 }
 
 @media screen and (max-width: 835px) {
@@ -96,8 +98,8 @@
 
 @media screen and (max-width: 800px) {
 
-    .feature-card ,
-    .partner-item ,
+    .feature-card,
+    .partner-item,
     .infrastructure-system__item,
     .feature-product__item.feature-product__active,
     .feature-product__item {
@@ -137,6 +139,10 @@
     .help-category-item {
         width: calc(100% / 3 - 15px);
     }
+
+    .team-card {
+        width: calc(100% / 2 - 20px);
+    }
 }
 
 @media screen and (max-width : 700px) {
@@ -144,6 +150,7 @@
         flex-direction: column;
     }
 
+    .stat-item,
     .tool-guide__item {
         width: 100%;
     }
@@ -159,6 +166,11 @@
         padding-bottom: 0px;
     }
 
+    .benefit-item ,
+    .product-overview,
+    .product-highlight,
+    .team-card, .value-card,
+    .reason-item,
     .infrastructure-system__item,
     .feature-product__item.feature-product__active,
     .feature-product__item {
@@ -169,25 +181,12 @@
         width: calc(100% / 2 - 20px);
     }
 
-    .reason-item {
-        width: 100%;
-    }
-
     .help-category-item {
         width: calc(100% / 2 - 15px);
     }
 
-    .product-overview,
-    .product-highlight {
-        width: 100%;
-    }
-
     .feature-card {
         padding: 10px;
-    }
-
-    .benefit-item {
-        width: 100%;
     }
 }
 

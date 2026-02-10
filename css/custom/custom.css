@@ -421,6 +421,19 @@
     margin-top: 30px;
 }
 
+.team-section,
+.team-list,
+.team-card,
+.about-stats__container,
+.about-stats,
+.stat-item,
+.value-card,
+.product-actions,
+.core-left,
+.core-right,
+.core-left__content,
+.timeline-left,
+.value-cards__container,
 .core-values,
 .partner-certifications__container,
 .partner-certifications,
@@ -567,20 +580,16 @@
 
 /* css trang giới thiệu chung */
 .timeline-right h4,
-.timeline-left h4{
+.timeline-left h4 {
     font-size: calc(var(--font-size-base) + 8px);
 }
 
 .timeline-right,
 .timeline-left {
-    width:  calc(100% / 2 - 20px);
+    width: calc(100% / 2 - 20px);
 }
 
-.timeline-left {
-    gap: 20px;
-}
-
-.timeline-left img{
+.timeline-left img {
     max-width: 259px;
     aspect-ratio: 259 / 227;
     object-fit: contain;
@@ -591,44 +600,117 @@
     justify-content: space-between;
 }
 
-.partner-item{
+.partner-item {
     width: calc(100% / 4 - 20px);
 }
 
-.partner-item img{
+.partner-item img {
     aspect-ratio: 235 / 79;
     object-fit: contain;
     object-position: center;
 }
 
-.core-left img{
+.core-left img {
     max-width: 84px;
     object-position: center;
     object-fit: contain;
 }
 
 .core-left,
-.core-right{
+.core-right {
     width: calc(100% / 2 - 20px);
-    gap: 20px;
-}
-
-.core-left__content{
-    gap: 20px;
 }
 
 .core-progress {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
 .progress-bar {
-  width: 0;
-  height: 15px;
-  background: var(--primary-color);
-  border-radius: 999px;
-  transition: width 1.2s ease;
+    width: 0;
+    height: 15px;
+    background: var(--primary-color);
+    border-radius: 999px;
+    transition: width 1.2s ease;
+}
+
+.value-icon {
+    max-width: 120px;
+    aspect-ratio: 1 / 1;
+    padding: 10px;
+}
+
+.value-card {
+    width: calc(100% / 3 - 20px);
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.value-icon,
+.value-card {
+    border-radius: 10px;
+}
+
+.value-icon img {
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    object-position: center;
+}
+
+.value-card h4 {
+    font-size: calc(var(--font-size-base) + 8px);
+}
+
+.value-card p {
+    font-size: var(--font-size-base);
+}
+
+.about-stats {}
+
+.stat-item {
+    width: calc(100% / 3 - 20px);
+}
+
+.stat-item h3 {
+    font-size: calc(var(--font-size-base) + 50px);
+    font-weight: bold;
+}
+
+.stat-item p {
+    font-size: calc(var(--font-size-base) + 8px);
+}
+
+.team-list {}
+
+.team-card {
+    width: calc(100% / 3 - 20px);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    padding: 20px;
+}
+
+.team-card h4{
+    font-size: calc(var(--font-size-base) + 8px);
+}
+
+.team-card p{
+    font-size: var(--font-size-base);
+}
+
+.team-avatar img
+.team-avatar {
+    aspect-ratio: 1 / 1;
+}
+
+.team-avatar img{
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 10px;
+}
+.team-avatar {
+    aspect-ratio: 1 / 1;
 }
 
 /* css hệ thống hạ tầng */
@@ -760,10 +842,6 @@
 .product-price__detail span {
     font-size: calc(var(--font-size-base) + 16px);
     font-weight: bold;
-}
-
-.product-actions {
-    gap: 20px;
 }
 
 .btn-primary,
