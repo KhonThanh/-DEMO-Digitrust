@@ -6,7 +6,10 @@
   --black-color: #333333;
   --white-blue: #F1F8FF;
   --gray-color: #D9D9D9;
-  
+  --error-color: #e53935;
+  --header-h: 64px;
+  --footer-h: 80px;
+
   --font-size-base: 16px;
   --font-roboto: 'Roboto', Arial, sans-serif;
   --font-dancing: 'Dancing Script', cursive;

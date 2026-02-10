@@ -25,6 +25,7 @@
 .pos-fixed { position: fixed; };
 .pos-stick { position: sticky; }
 
+.container-xxs,
 .container-xs,
 .container-m,
 .container-l,
@@ -52,4 +53,8 @@
 
 .container-xs {
   max-width: 920px;
+}
+
+.container-xxs{
+  max-width: 500px;
 }

@@ -620,6 +620,47 @@ function initTechBoxToggle({
     });
   });
 }
+
+// js validate form
+function validateForm(form) {
+  let isValid = true;
+
+  const groups = form.querySelectorAll(".form-group");
+
+  groups.forEach(group => {
+    const input = group.querySelector("input, textarea");
+    const error = group.querySelector(".error-msg");
+
+    if (!input) return;
+
+    if (input.value.trim() === "") {
+      isValid = false;
+      group.classList.add("error");
+      error.textContent = "Vui lòng không để trống";
+    } else {
+      group.classList.remove("error");
+      error.textContent = "";
+    }
+  });
+
+  return isValid;
+}
+
+function initFormValidation(root = document) {
+  const forms = root.querySelectorAll(".js-validate-form");
+
+  forms.forEach(form => {
+    if (form.dataset._validated === "true") return;
+    form.dataset._validated = "true";
+
+    form.addEventListener("submit", function (e) {
+      const ok = validateForm(form);
+      if (!ok) {
+        e.preventDefault(); 
+      }
+    });
+  });
+}
 // ----------- Vùng gọi biến --------------
 document.addEventListener("DOMContentLoaded", () => {
   includeHTML(() => {
@@ -756,6 +797,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initMobileMenuSimple();
     runCoreProgress();
     initTechBoxToggle();
+    initFormValidation();
   });
 });
 
