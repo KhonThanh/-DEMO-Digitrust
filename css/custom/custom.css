@@ -149,7 +149,7 @@
     position: relative;
 }
 
-.menu-leveltwo__container>a::after {
+.menu-leveltwo__container:has(.menu-list__leveltwo) > a::after {
     content: " ▸";
 }
 
