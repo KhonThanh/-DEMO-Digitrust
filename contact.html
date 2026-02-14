@@ -68,56 +68,75 @@
                     </div>
                     <div class="flex flex-col contact__item">
                         <h2>Gửi yêu cầu về chúng tôi</h2>
-                        <form class="contact-form flex flex-col">
+                        <form class="contact-form js-validate-form flex flex-col" data-form="contact">
+
                             <div class="form-row flex">
                                 <div class="form-group flex flex-col">
                                     <label>Họ và tên <span>*</span></label>
-                                    <input type="text" name="full_name" required>
+                                    <input type="text" name="full_name" required minlength="3"
+                                        data-msg="Vui lòng nhập họ tên (tối thiểu 3 ký tự)">
+                                    <small class="error-msg"></small>
                                 </div>
 
                                 <div class="form-group flex flex-col">
                                     <label>Email Doanh nghiệp</label>
-                                    <input type="email" name="email">
+                                    <input type="email" name="email" data-msg="Email không hợp lệ" autocomplete="email">
+                                    <small class="error-msg"></small>
                                 </div>
                             </div>
+
                             <div class="form-row flex">
                                 <div class="form-group flex flex-col">
                                     <label>Số điện thoại <span>*</span></label>
-                                    <input type="tel" name="phone" required>
+                                    <input type="tel" name="phone" required pattern="^0\d{9}$"
+                                        data-msg="Số điện thoại không hợp lệ">
+                                    <small class="error-msg"></small>
                                 </div>
 
                                 <div class="form-group flex flex-col">
                                     <label>Tên công ty</label>
                                     <input type="text" name="company">
+                                    <small class="error-msg"></small>
                                 </div>
                             </div>
+
                             <div class="form-row flex">
                                 <div class="form-group flex flex-col">
                                     <label>Dịch vụ quan tâm <span>*</span></label>
-                                    <select name="service" required>
-                                        <option value="">Tư vấn dịch vụ</option>
-                                        <option value="ssl">SSL Certificates</option>
-                                        <option value="cloud">Cloud Server</option>
-                                        <option value="email">Email doanh nghiệp</option>
-                                        <option value="other">Khác</option>
-                                    </select>
+                                    <div class="form-group__container">
+                                        <select name="service" required>
+                                            <option value="">Tư vấn dịch vụ</option>
+                                            <option value="ssl">SSL Certificates</option>
+                                            <option value="cloud">Cloud Server</option>
+                                            <option value="email">Email doanh nghiệp</option>
+                                            <option value="other">Khác</option>
+                                        </select>
+                                    </div>
+                                    <small class="error-msg"></small>
                                 </div>
 
                                 <div class="form-group flex flex-col">
                                     <label>Ngân sách dự kiến <span>*</span></label>
-                                    <input type="text" name="budget" required>
+                                    <input type="text" name="budget" required
+                                        data-msg="Vui lòng nhập ngân sách dự kiến">
+                                    <small class="error-msg"></small>
                                 </div>
                             </div>
+
                             <div class="form-group flex flex-col">
                                 <label>Mô tả nhu cầu của bạn <span>*</span></label>
-                                <textarea name="message" rows="4" required></textarea>
+                                <textarea name="message" rows="4" required minlength="10"
+                                    data-msg="Vui lòng mô tả tối thiểu 10 ký tự"></textarea>
+                                <small class="error-msg"></small>
                             </div>
-                            <div class="form-group captcha">
-                                <!-- placeholder reCAPTCHA -->
-                                <div class="recaptcha-box">
-                                    I'm not a robot
+                            <div class="form-group captcha-box">
+                                <div class="fake-recaptcha">
+                                    <input type="checkbox" name="captcha" required>
+                                    <span>I'm not a robot</span>
                                 </div>
+                                <small class="error-msg"></small>
                             </div>
+
                             <div class="form-group full-width">
                                 <button type="submit" class="btn-submit">
                                     Gửi yêu cầu tư vấn
@@ -142,7 +161,7 @@
         </section>
     </main>
     <footer class="container-f bg-white center-ver" data-include="./component/footer.html"></footer>
-        <section class="cta-floating flex flex-col" data-include="./component/cta-floating.html"></section>
+    <section class="cta-floating flex flex-col" data-include="./component/cta-floating.html"></section>
     <section class="btntotop__container pos-fixed bg-white" data-include="./component/rolltotop.html" id="btnToTop">
     </section>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>

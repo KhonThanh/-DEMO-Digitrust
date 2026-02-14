@@ -24,22 +24,26 @@
         </section>
         <section class="container-f flex center-ver container-padding">
             <div class="auth-section container-xxs flex flex-col center-ver" id="section-login">
-                <div class="auth-section__logo ">
-                    <img src="./img/logo/logo-top.webp" alt="">
+                <div class="auth-section__logo">
+                    <img src="./img/logo/logo-top.webp" alt="Logo">
                 </div>
+
                 <h3 class="auth-title">Đăng nhập tài khoản</h3>
                 <p class="auth-desc">Vui lòng nhập thông tin đăng nhập</p>
 
                 <form class="js-validate-form flex flex-col" data-form="login">
+
                     <p>Tài khoản</p>
                     <div class="form-group flex">
-                        <input type="text" placeholder="Tài khoản">
+                        <input type="text" name="username" placeholder="Tài khoản" required autocomplete="username"
+                            data-msg="Vui lòng nhập tài khoản">
                         <small class="error-msg"></small>
                     </div>
-                    
+
                     <p>Mật khẩu</p>
                     <div class="form-group flex">
-                        <input type="password" placeholder="Mật khẩu">
+                        <input type="password" name="password" placeholder="Mật khẩu" required minlength="6"
+                            autocomplete="current-password" data-msg="Mật khẩu tối thiểu 6 ký tự">
                         <small class="error-msg"></small>
                     </div>
 

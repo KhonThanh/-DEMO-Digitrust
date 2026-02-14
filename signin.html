@@ -23,58 +23,68 @@
             </div>
         </section>
         <section class="container-f flex center-ver container-padding">
-            <div class="auth-section container-xxs flex flex-col center-ver" id="section-login">
-                <div class="auth-section__logo ">
-                    <img src="./img/logo/logo-top.webp" alt="">
+            <div class="auth-section container-xxs flex flex-col center-ver" id="section-register">
+
+                <div class="auth-section__logo">
+                    <img src="./img/logo/logo-top.webp" alt="Logo">
                 </div>
+
                 <h3 class="auth-title">Đăng ký tài khoản</h3>
-                <form class="js-validate-form flex flex-col" data-form="login">
+
+                <form class="js-validate-form flex flex-col" data-form="register">
                     <p>Tài khoản</p>
                     <div class="form-group flex">
-                        <input type="text" placeholder="Tài khoản">
+                        <input type="text" name="username" placeholder="Tài khoản" required minlength="4"
+                            data-msg="Tài khoản tối thiểu 4 ký tự" autocomplete="username">
                         <small class="error-msg"></small>
                     </div>
-
                     <p>Mật khẩu</p>
                     <div class="form-group flex">
-                        <input type="password" placeholder="Mật khẩu">
+                        <input type="password" name="password" placeholder="Mật khẩu" required minlength="6"
+                            data-msg="Mật khẩu tối thiểu 6 ký tự" autocomplete="new-password">
                         <small class="error-msg"></small>
                     </div>
-
                     <p>Nhập lại mật khẩu</p>
                     <div class="form-group flex">
-                        <input type="password" placeholder="Mật khẩu">
+                        <input type="password" name="confirmPassword" placeholder="Nhập lại mật khẩu" required
+                            data-match="password" data-msg="Mật khẩu không khớp">
                         <small class="error-msg"></small>
                     </div>
-
                     <p>Số điện thoại</p>
                     <div class="form-group flex">
-                        <input type="text" placeholder="Tài khoản">
+                        <input type="tel" name="phone" placeholder="Số điện thoại" required pattern="^0\d{9}$"
+                            data-msg="Số điện thoại không hợp lệ">
                         <small class="error-msg"></small>
                     </div>
-
                     <p>Email</p>
                     <div class="form-group flex">
-                        <input type="text" placeholder="Tài khoản">
+                        <input type="email" name="email" placeholder="Email" required data-msg="Email không hợp lệ"
+                            autocomplete="email">
                         <small class="error-msg"></small>
                     </div>
-
                     <div class="form-group checkbox-group">
                         <label class="flex center-ver">
-                            <input type="checkbox" name="agree">
-                            <p>Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> và <a href="#">Chính sách bảo mật</a></p>
+                            <input type="checkbox" name="agree" required>
+                            <span>
+                                Tôi đồng ý với
+                                <a href="#">Điều khoản dịch vụ</a>
+                                và
+                                <a href="#">Chính sách bảo mật</a>
+                            </span>
                         </label>
                         <small class="error-msg"></small>
                     </div>
                     <div class="form-group captcha-box">
                         <div class="fake-recaptcha">
-                            <input type="checkbox">
+                            <input type="checkbox" name="captcha" required>
                             <span>I'm not a robot</span>
                         </div>
                         <small class="error-msg"></small>
                     </div>
-                    <button type="submit">Đăng nhập</button>
+
+                    <button type="submit">Đăng ký</button>
                 </form>
+
             </div>
         </section>
     </main>

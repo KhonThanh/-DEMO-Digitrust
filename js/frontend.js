@@ -622,45 +622,73 @@ function initTechBoxToggle({
 }
 
 // js validate form
+function validateField(input) {
+  const group = input.closest(".form-group");
+  const error = group?.querySelector(".error-msg");
+  let message = "";
+
+  const value = input.value.trim();
+
+  if (input.hasAttribute("required") && !value) {
+    message = input.dataset.msg || "Vui lòng không để trống";
+  }
+
+  if (!message && input.type === "email" && value) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(value)) message = "Email không hợp lệ";
+  }
+
+  if (!message && input.hasAttribute("minlength")) {
+    const min = +input.getAttribute("minlength");
+    if (value.length < min) {
+      message = input.dataset.msg || `Tối thiểu ${min} ký tự`;
+    }
+  }
+
+  if (!message && input.tagName === "SELECT" && input.required) {
+    if (!input.value) message = "Vui lòng chọn một giá trị";
+  }
+
+  if (!message && input.type === "checkbox" && input.required) {
+    if (!input.checked) message = "Vui lòng xác nhận";
+  }
+
+  if (!message && input.pattern && input.value) {
+    const regex = new RegExp(input.pattern);
+    if (!regex.test(input.value)) {
+      message = input.dataset.msg || "Giá trị không hợp lệ";
+    }
+  }
+
+  if (group) group.classList.toggle("error", !!message);
+  if (error) error.textContent = message;
+
+  return !message;
+}
+
 function validateForm(form) {
   let isValid = true;
-
-  const groups = form.querySelectorAll(".form-group");
-
-  groups.forEach(group => {
-    const input = group.querySelector("input, textarea");
-    const error = group.querySelector(".error-msg");
-
-    if (!input) return;
-
-    if (input.value.trim() === "") {
-      isValid = false;
-      group.classList.add("error");
-      error.textContent = "Vui lòng không để trống";
-    } else {
-      group.classList.remove("error");
-      error.textContent = "";
-    }
+  form.querySelectorAll("input, textarea").forEach(input => {
+    if (!validateField(input)) isValid = false;
   });
-
   return isValid;
 }
 
 function initFormValidation(root = document) {
-  const forms = root.querySelectorAll(".js-validate-form");
-
-  forms.forEach(form => {
-    if (form.dataset._validated === "true") return;
+  root.querySelectorAll(".js-validate-form").forEach(form => {
+    if (form.dataset._validated) return;
     form.dataset._validated = "true";
 
-    form.addEventListener("submit", function (e) {
-      const ok = validateForm(form);
-      if (!ok) {
-        e.preventDefault(); 
-      }
+    form.querySelectorAll("input, textarea").forEach(input => {
+      input.addEventListener("input", () => validateField(input));
+    });
+
+    form.addEventListener("submit", e => {
+      if (!validateForm(form)) e.preventDefault();
     });
   });
 }
+
 // ----------- Vùng gọi biến --------------
 document.addEventListener("DOMContentLoaded", () => {
   includeHTML(() => {
