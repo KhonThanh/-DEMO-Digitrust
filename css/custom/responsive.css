@@ -34,11 +34,8 @@
         width: calc(100% / 4 - 20px);
     }
 
+    .reason-item,
     .tool-guide__item {
-        width: calc(100% / 2 - 20px);
-    }
-
-    .reason-item {
         width: calc(100% / 2 - 20px);
     }
 
@@ -54,6 +51,7 @@
         padding: 30px;
     }
 
+    .digicert-solution__block,
     .timeline-right,
     .timeline-left {
         width: 100%;
@@ -143,6 +141,10 @@
     .team-card {
         width: calc(100% / 2 - 20px);
     }
+
+    .digicert-why__card {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width : 700px) {
@@ -150,6 +152,7 @@
         flex-direction: column;
     }
 
+    .digicert-highlight__card,
     .stat-item,
     .tool-guide__item {
         width: 100%;
@@ -157,6 +160,10 @@
 
     .product-tabs {
         display: none;
+    }
+
+    .digicert-card{
+        width: calc(100% / 2 - 10px);
     }
 }
 
@@ -166,10 +173,11 @@
         padding-bottom: 0px;
     }
 
-    .benefit-item ,
+    .benefit-item,
     .product-overview,
     .product-highlight,
-    .team-card, .value-card,
+    .team-card,
+    .value-card,
     .reason-item,
     .infrastructure-system__item,
     .feature-product__item.feature-product__active,

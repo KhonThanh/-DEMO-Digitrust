@@ -421,6 +421,16 @@
     margin-top: 30px;
 }
 
+.digicert-highlight__card,
+.digicert-highlight__grid,
+.digicert-highlight,
+.digicert-card,
+.digicert-solution__grid,
+.digicert-solution__wrapper,
+.digicert-solution__block,
+.digicert-why__content,
+.digicert-why__card,
+.digicert-why__grid,
 .next-blog__container,
 .otp-group,
 .checkbox-group label,
@@ -1373,6 +1383,93 @@ footer {
     width: 100%;
     text-align: center;
 
+}
+
+/* css giải pháp */
+.digicert-why {}
+
+.section-heading {}
+
+.digicert-why__grid {
+    margin-top: 20px;
+}
+
+.digicert-why__card {
+    width: calc(100% / 2 - 20px);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid var(--primary-color);
+}
+
+.digicert-why__icon {
+    aspect-ratio: 1 / 1;
+    min-width: 80px;
+}
+
+.digicert-why__icon img {
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    object-position: center;
+}
+
+.digicert-why__content {
+    font-size: var(--font-size-base);
+}
+
+.digicert-solution {}
+
+.digicert-solution__wrapper {}
+
+.digicert-solution__block {
+    width: calc(100% / 2 - 15px);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.section-heading h2,
+.digicert-solution__title {
+    font-size: calc(var(--font-size-base) + 22px);
+    text-transform: unset;
+}
+
+.digicert-card {
+    width: calc(100% / 3 - 15px);
+    padding: 30px 10px;
+    border-radius: 10px;
+}
+
+.solution-custom__btn{
+    text-transform: uppercase;
+}
+
+.digicert-card__icon {
+    max-height: 84px;
+}
+
+.digicert-card__icon img{
+    object-fit: contain;
+    object-position: center;
+}
+
+.digicert-highlight{
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.digicert-highlight__card{
+    width: calc(100% / 3 - 15px);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.digicert-highlight__icon{
+    max-width: 75px;
+    aspect-ratio: 1 / 1;
+}
+
+.digicert-highlight__icon img{
+    object-fit: contain;
+    object-position: center;
 }
 
 /* css cơ sở hạ tầng */
