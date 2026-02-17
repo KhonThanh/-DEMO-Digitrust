@@ -421,6 +421,7 @@
     margin-top: 30px;
 }
 
+.background-banner__content,
 .digicert-highlight__card,
 .digicert-highlight__grid,
 .digicert-highlight,
@@ -1215,7 +1216,11 @@
     padding: 20px;
     gap: 10px;
     border-radius: 10px;
-    border: 1px solid var(--white-blue);
+    border: 1px solid var(--primary-color);
+}
+
+.faq-list{
+    margin-top: 20px;
 }
 
 /* css trang liên hệ */
@@ -1671,6 +1676,7 @@ footer {
     -webkit-overflow-scrolling: touch;
 }
 
+.digicert-table,
 .email-table,
 .domain-table {
     width: 100%;
@@ -1683,10 +1689,12 @@ footer {
     min-width: 1414px;
 }
 
+.digicert-table,
 .domain-table {
     min-width: 560px;
 }
 
+.digicert-table th,
 .domain-table th {
     background: var(--primary-color);
     color: var(--white-color);
@@ -1694,10 +1702,45 @@ footer {
     text-align: center;
 }
 
+.digicert-table td,
 .domain-table td {
     padding: 16px;
-    text-align: center;
     border-bottom: 1px solid var(--white-blue);
+}
+
+.digicert-table td:not(:first-child),
+.domain-table td {
+    text-align: center;
+}
+
+.background-banner__container{
+    aspect-ratio: 1970 / 769;
+}
+
+.background-banner__content .hero-title{
+    font-size: calc(var(--font-size-base) * 2.5);
+}
+
+.background-banner__content .hero-desc{
+    font-size: calc(var(--font-size-base) + 5px);
+}
+
+.background-banner__content button{
+    font-size: calc(var(--font-size-base) + 6px);
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+}
+
+.background-banner__logobrand {
+    aspect-ratio: 279 / 128;
+    max-width: 200px;
+}
+
+.background-banner__logobrand img {
+    object-fit: contain;
+    object-position: center;
 }
 
 /* css fade */

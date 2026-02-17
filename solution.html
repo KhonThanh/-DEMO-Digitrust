@@ -16,6 +16,20 @@
 <body>
     <header class="container-f" data-include="./component/header.html"></header>
     <main class="container-f flex flex-col center-hor">
+        <section class="container-f bg-primary background-banner__container flex center-ver">
+            <div class="container-l flex flex-col center-ver background-banner__content">
+                <div class="background-banner__logobrand">
+                    <img src="./img/logo/digicert.png" alt="">
+                </div>
+                <h1 class="hero-title text-center text-color-white">Bảo mật kỹ thuật số tiêu chuẩn vàng
+                    với DigiCert</h1>
+                <p class="hero-desc text-center text-color-white">
+                    DigiCert Platinum Partner mang đến giải pháp bảo mật số tiền tuyến cho doanh nghiệp, tin cậy, bảo
+                    đảm trọn vẹn sự an tâm khi sử dụng các sản phẩm với tiêu chuẩn cao với DigiCert.
+                </p>
+                <button class="btn-primary bg-white">Tư vấn giải pháp ngay</button>
+            </div>
+        </section>
         <section class="flex bg-gray container-f">
             <div class="container-l nav-bar__container">
                 <a href="#" class="nav-bar__item">Trang chủ</a>
@@ -237,6 +251,7 @@
             <div class="container-l">
                 <div class="table-scroll">
                     <table class="digicert-table">
+
                         <thead>
                             <tr>
                                 <th></th>
@@ -245,31 +260,81 @@
                                 <th>EV SSL</th>
                             </tr>
                         </thead>
+
                         <tbody>
                             <tr>
-                                <td>Chứng thực cá nhân</td>
-                                <td>✓</td>
-                                <td>✓</td>
-                                <td>✓</td>
+                                <td>Chứng thực tên miền</td>
+                                <td class="text-center">✓</td>
+                                <td class="text-center">✓</td>
+                                <td class="text-center">✓</td>
                             </tr>
+
                             <tr>
                                 <td>Chứng thực tổ chức</td>
-                                <td></td>
-                                <td>✓</td>
-                                <td>✓</td>
+                                <td class="text-center">✓</td>
+                                <td class="text-center">✓</td>
+                                <td class="text-center">✓</td>
                             </tr>
+
+                            <tr>
+                                <td>Chứng thực mở rộng</td>
+                                <td class="text-center">✓</td>
+                                <td class="text-center">✓</td>
+                                <td class="text-center">✓</td>
+                            </tr>
+
+                            <tr>
+                                <td>Hiển thị tên doanh nghiệp</td>
+                                <td class="text-center">✓</td>
+                                <td class="text-center">✓</td>
+                                <td class="text-center">✓</td>
+                            </tr>
+
                             <tr>
                                 <td>Mức độ tin cậy</td>
-                                <td>Thấp</td>
-                                <td>Trung</td>
-                                <td>Cao</td>
+                                <td class="text-center">✓</td>
+                                <td class="text-center">✓</td>
+                                <td class="text-center">✓</td>
                             </tr>
+
+                            <tr>
+                                <td>Phù hợp doanh nghiệp</td>
+                                <td class="text-center">✓</td>
+                                <td class="text-center">✓</td>
+                                <td class="text-center">✓</td>
+                            </tr>
+
+                            <!-- BUTTON ROW -->
+                            <tr class="digicert-table__action">
+                                <td></td>
+                                <td class="text-center">
+                                    <a href="#" class="btn-primary text-color-white bg-primary">Xem chi tiết</a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="#" class="btn-primary text-color-white bg-primary">Xem chi tiết</a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="#" class="btn-primary text-color-white bg-primary">Xem chi tiết</a>
+                                </td>
+                            </tr>
+
                         </tbody>
                     </table>
                 </div>
             </div>
         </section>
         <section id="faq" class="container-f container-padding bg-blue-white" data-include="./component/faq.html">
+        </section>
+        <section class="container-f container-padding bg-primary">
+            <div class="container-xs flex flex-col center-ver email-benefits__title">
+                <h2 class="hero-title text-center text-header-size text-color-white">Bạn vẫn chưa biết nên chọn…?</h2>
+                <p class="hero-desc text-center text-color-white">
+                    Đừng lo lắng, đội ngũ chuyên gia của chúng tôi luôn sẵn sàng lắng nghe nhu cầu và tư vấn giải pháp
+                    bảo mật phù hợp nhất cho website và doanh nghiệp của bạn. Hãy liên hệ ngay để được hỗ trợ nhanh
+                    chóng, chính xác và hiệu quả.
+                </p>
+                <button class="btn-primary text-color-white bg-primary">Liên hệ tư vấn</button>
+            </div>
         </section>
     </main>
     <footer class="container-f bg-white center-ver" data-include="./component/footer.html"></footer>

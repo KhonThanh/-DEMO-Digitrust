@@ -56,6 +56,22 @@
     .timeline-left {
         width: 100%;
     }
+
+    .background-banner__content .hero-title {
+        font-size: calc(var(--font-size-base) * 1.5);
+    }
+
+    .background-banner__content .hero-desc {
+        font-size: calc(var(--font-size-base) + 2px);
+    }
+
+    .background-banner__content button {
+        font-size: calc(var(--font-size-base) + 2px);
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 50px;
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -77,6 +93,10 @@
 
     .value-card {
         width: calc(100% / 2 - 20px);
+    }
+
+    .background-banner__container {
+        aspect-ratio: 16 / 9;
     }
 }
 
@@ -111,6 +131,15 @@
     .core-left,
     .core-right {
         width: 100%;
+    }
+
+    .background-banner__container {
+        aspect-ratio: 4 / 3;
+    }
+
+    .background-banner__logobrand {
+        aspect-ratio: 279 / 128;
+        max-width: 120px;
     }
 }
 
@@ -162,7 +191,7 @@
         display: none;
     }
 
-    .digicert-card{
+    .digicert-card {
         width: calc(100% / 2 - 10px);
     }
 }
