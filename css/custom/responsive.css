@@ -141,6 +141,10 @@
         aspect-ratio: 279 / 128;
         max-width: 120px;
     }
+
+    .cta-floating{
+        top: 70%;
+    }
 }
 
 @media screen and (min-width: 769px) {}

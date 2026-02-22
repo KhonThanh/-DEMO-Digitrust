@@ -594,29 +594,40 @@ function runCoreProgress() {
     });
   });
 }
-// js phần table trong email
-function initTechBoxToggle({
-  techBoxSelector = ".tech-box",
-  tableSelector = ".table-scroll",
-  activeClass = "active",
-} = {}) {
-  const techBoxes = document.querySelectorAll(techBoxSelector);
-  const tables = document.querySelectorAll(tableSelector);
 
-  if (!techBoxes.length || !tables.length) return;
+// js vuôt table
+function initTableGrabScroll(root = document) {
+  root.querySelectorAll(".table-scroll").forEach(container => {
+    if (container.dataset.dragInit) return;
+    container.dataset.dragInit = "true";
 
-  techBoxes.forEach((box, index) => {
-    if (box.dataset._techBound === "true") return;
-    box.dataset._techBound = "true";
+    let isDragging = false;
+    let startX = 0;
+    let scrollLeft = 0;
 
-    box.addEventListener("click", () => {
-      techBoxes.forEach(b => b.classList.remove(activeClass));
-      tables.forEach(t => t.classList.remove(activeClass));
+    container.addEventListener("pointerdown", (e) => {
+      isDragging = true;
+      startX = e.clientX;
+      scrollLeft = container.scrollLeft;
+      container.setPointerCapture(e.pointerId);
+      container.style.cursor = "grabbing";
+    });
 
-      box.classList.add(activeClass);
-      if (tables[index]) {
-        tables[index].classList.add(activeClass);
-      }
+    container.addEventListener("pointermove", (e) => {
+      if (!isDragging) return;
+      const walk = e.clientX - startX;
+      container.scrollLeft = scrollLeft - walk;
+    });
+
+    container.addEventListener("pointerup", (e) => {
+      isDragging = false;
+      container.releasePointerCapture(e.pointerId);
+      container.style.cursor = "grab";
+    });
+
+    container.addEventListener("pointercancel", () => {
+      isDragging = false;
+      container.style.cursor = "grab";
     });
   });
 }
@@ -826,6 +837,7 @@ document.addEventListener("DOMContentLoaded", () => {
     runCoreProgress();
     initTechBoxToggle();
     initFormValidation();
+    initTableGrabScroll();
   });
 });
 
