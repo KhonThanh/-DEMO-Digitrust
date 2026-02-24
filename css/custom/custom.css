@@ -1345,7 +1345,7 @@
 }
 
 .next-blog__title {
-    font-size: calc(var(--font-size-base) + 4px);
+    font-size: calc(var(--font-size-base) + 2px);
 }
 
 .next-blog__content {
@@ -1357,6 +1357,11 @@
 }
 
 .next-blog__next {}
+
+.email-benefits__title{
+    padding: 20px;
+    border-radius: 10px;
+}
 
 /* css footer */
 
@@ -1740,8 +1745,9 @@ footer {
     aspect-ratio: 1970 / 769;
 }
 
+.email-benefits__title .hero-title,
 .background-banner__content .hero-title {
-    font-size: calc(var(--font-size-base) * 2.5);
+    font-size: calc(var(--font-size-base) * 1.5);
 }
 
 .background-banner__content .hero-desc {
