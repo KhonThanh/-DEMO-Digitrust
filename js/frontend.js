@@ -835,7 +835,6 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleMenu('.menu-container__bar', '.m-menu');
     initMobileMenuSimple();
     runCoreProgress();
-    initTechBoxToggle();
     initFormValidation();
     initTableGrabScroll();
   });
