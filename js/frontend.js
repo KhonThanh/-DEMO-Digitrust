@@ -596,38 +596,41 @@ function runCoreProgress() {
 }
 
 // js vuôt table
-function initTableGrabScroll(root = document) {
-  root.querySelectorAll(".table-scroll").forEach(container => {
-    if (container.dataset.dragInit) return;
-    container.dataset.dragInit = "true";
+function initHorizontalDragScroll(selector = ".table-scroll") {
+  const elements = document.querySelectorAll(selector);
 
-    let isDragging = false;
-    let startX = 0;
-    let scrollLeft = 0;
+  elements.forEach((el) => {
+    // tránh bind trùng
+    if (el.dataset.dragScrollBound === "true") return;
+    el.dataset.dragScrollBound = "true";
 
-    container.addEventListener("pointerdown", (e) => {
-      isDragging = true;
-      startX = e.clientX;
-      scrollLeft = container.scrollLeft;
-      container.setPointerCapture(e.pointerId);
-      container.style.cursor = "grabbing";
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    el.addEventListener("mousedown", (e) => {
+      isDown = true;
+      el.classList.add("is-dragging");
+      startX = e.pageX - el.offsetLeft;
+      scrollLeft = el.scrollLeft;
     });
 
-    container.addEventListener("pointermove", (e) => {
-      if (!isDragging) return;
-      const walk = e.clientX - startX;
-      container.scrollLeft = scrollLeft - walk;
+    el.addEventListener("mouseleave", () => {
+      isDown = false;
+      el.classList.remove("is-dragging");
     });
 
-    container.addEventListener("pointerup", (e) => {
-      isDragging = false;
-      container.releasePointerCapture(e.pointerId);
-      container.style.cursor = "grab";
+    el.addEventListener("mouseup", () => {
+      isDown = false;
+      el.classList.remove("is-dragging");
     });
 
-    container.addEventListener("pointercancel", () => {
-      isDragging = false;
-      container.style.cursor = "grab";
+    el.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - el.offsetLeft;
+      const walk = x - startX;
+      el.scrollLeft = scrollLeft - walk;
     });
   });
 }
@@ -836,7 +839,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initMobileMenuSimple();
     runCoreProgress();
     initFormValidation();
-    initTableGrabScroll();
+    initHorizontalDragScroll();
   });
 });
 

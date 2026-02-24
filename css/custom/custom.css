@@ -1747,7 +1747,7 @@ footer {
 
 .email-benefits__title .hero-title,
 .background-banner__content .hero-title {
-    font-size: calc(var(--font-size-base) * 1.5);
+    font-size: calc(var(--font-size-base) * 1.5px);
 }
 
 .background-banner__content .hero-desc {
