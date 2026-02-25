@@ -492,6 +492,34 @@ function generateHeadingLinks({
     }
   }
 }
+
+// js phần table trong email
+function initTechBoxToggle({
+  techBoxSelector = ".tech-box",
+  tableSelector = ".table-scroll",
+  activeClass = "active",
+} = {}) {
+  const techBoxes = document.querySelectorAll(techBoxSelector);
+  const tables = document.querySelectorAll(tableSelector);
+
+  if (!techBoxes.length || !tables.length) return;
+
+  techBoxes.forEach((box, index) => {
+    if (box.dataset._techBound === "true") return;
+    box.dataset._techBound = "true";
+
+    box.addEventListener("click", () => {
+      techBoxes.forEach(b => b.classList.remove(activeClass));
+      tables.forEach(t => t.classList.remove(activeClass));
+
+      box.classList.add(activeClass);
+      if (tables[index]) {
+        tables[index].classList.add(activeClass);
+      }
+    });
+  });
+}
+
 // js bật tắt menu
 function toggleMenu(buttonSelector, menuSelector) {
   const button = document.querySelector(buttonSelector);
@@ -703,6 +731,23 @@ function initFormValidation(root = document) {
   });
 }
 
+// js lick thẻ đẩy ra link
+function makeDivActLikeLink(targetClass) {
+    const items = document.querySelectorAll(`.${targetClass}`);
+
+    items.forEach(item => {
+        item.style.cursor = "pointer";
+
+        item.addEventListener('click', function () {
+            const link = item.dataset.link;
+
+            if (link) {
+                window.location.href = link;
+            }
+        });
+    });
+}
+
 // ----------- Vùng gọi biến --------------
 document.addEventListener("DOMContentLoaded", () => {
   includeHTML(() => {
@@ -840,6 +885,8 @@ document.addEventListener("DOMContentLoaded", () => {
     runCoreProgress();
     initFormValidation();
     initHorizontalDragScroll();
+    initTechBoxToggle();
+    makeDivActLikeLink('infrastructure-system__item');
   });
 });
 
