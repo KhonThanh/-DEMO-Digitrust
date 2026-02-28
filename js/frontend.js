@@ -836,6 +836,19 @@ document.addEventListener("DOMContentLoaded", () => {
         variableWidth: true
       }
     });
+    initSlickSlider({
+      mainSelector: ".next-blog__container",
+      minSlides: 3,
+      prevBtnSelector: ".next-blog__previous",
+      nextBtnSelector: ".next-blog__next",
+      mainOptions: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: false,
+        adaptiveHeight: true
+      }
+    });
 
     // 🟡 roll to the top
     initScrollToTop();

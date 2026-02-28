@@ -1398,11 +1398,11 @@
 /* css blog */
 .blog-content__right,
 .blog-content__left {
-    gap: 10px;
+    gap: 20px;
 }
 
 .blog-content__left {
-    flex: 1 1 70%;
+    width: 70%;
 }
 
 .blog-content__left ul {
@@ -1410,7 +1410,7 @@
 }
 
 .blog-content__right {
-    flex: 0 0 30%;
+    width: 30%;
 }
 
 .blog-content__right a {
@@ -1425,8 +1425,19 @@
     border: 1px solid var(--primary-color);
 }
 
+.next-blog__next,
+.next-blog__previous {
+    width: fit-content;
+}
+
+
 .next-blog__item {
-    gap: 10px;
+    width: auto;
+}
+
+.next-blog__container {
+    width: 100%;
+    overflow: hidden;
 }
 
 .next-blog__title {

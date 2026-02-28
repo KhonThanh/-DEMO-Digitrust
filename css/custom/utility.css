@@ -12,6 +12,9 @@
 .flex-wrap{flex-wrap: wrap;}
 .center-hor{justify-content: center;}
 .center-ver{align-items: center;}
+.gap-20px{gap:20px;}
+.gap-30px{gap:30px;}
+.gap-10px{gap:10px;}
 .container-padding { padding: 60px 0px;}
 
 .uppercase { text-transform: uppercase; }
@@ -20,9 +23,9 @@
 
 .text-center { text-align: center; }
 .text-header-size{ font-size: 38px;}
-.pos-rel { position: relative; };
-.pos-abs { position: absolute; };
-.pos-fixed { position: fixed; };
+.pos-rel { position: relative; }
+.pos-abs { position: absolute; }
+.pos-fixed { position: fixed; }
 .pos-stick { position: sticky; }
 
 .container-xxs,

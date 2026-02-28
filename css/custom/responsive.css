@@ -1,5 +1,4 @@
-@media screen and (max-width: 1270px) {
-}
+@media screen and (max-width: 1270px) {}
 
 @media screen and (min-width: 1200px) {
     .menu-container__bar {
@@ -139,7 +138,7 @@
         max-width: 120px;
     }
 
-    .cta-floating{
+    .cta-floating {
         top: 70%;
     }
 }
@@ -182,6 +181,8 @@
         flex-direction: column;
     }
 
+    .blog-content__right,
+    .blog-content__left,
     .digicert-highlight__card,
     .stat-item,
     .tool-guide__item {
