@@ -733,20 +733,37 @@ function initFormValidation(root = document) {
 
 // js lick thẻ đẩy ra link
 function makeDivActLikeLink(targetClass) {
-    const items = document.querySelectorAll(`.${targetClass}`);
+  const items = document.querySelectorAll(`.${targetClass}`);
 
-    items.forEach(item => {
-        item.style.cursor = "pointer";
+  items.forEach(item => {
+    item.style.cursor = "pointer";
 
-        item.addEventListener('click', function () {
-            const link = item.dataset.link;
+    item.addEventListener('click', function () {
+      const link = item.dataset.link;
 
-            if (link) {
-                window.location.href = link;
-            }
-        });
+      if (link) {
+        window.location.href = link;
+      }
     });
+  });
 }
+
+// js option product
+function handleProductTypeChange(selectId, targetId) {
+  const select = document.getElementById(selectId);
+  const target = document.getElementById(targetId);
+
+  select.addEventListener("change", function () {
+    const value = this.value;
+
+    if (value === "dv" || value === "ov" || value === "ev") {
+      target.classList.remove("hidden");
+    } else {
+      target.classList.add("hidden");
+    }
+  });
+}
+
 
 // ----------- Vùng gọi biến --------------
 document.addEventListener("DOMContentLoaded", () => {
@@ -862,6 +879,11 @@ document.addEventListener("DOMContentLoaded", () => {
         behavior: "toggle"
       },
       {
+        trigger: ".pagination-btn__custom",
+        behavior: "activate",
+        activeClass: "active",
+      },
+      {
         trigger: ".js-faq-trigger",
         target: ".js-faq-target",
         activeClass: "active",
@@ -886,6 +908,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initFormValidation();
     initHorizontalDragScroll();
     initTechBoxToggle();
+    handleProductTypeChange("productType", "sslOptions");
     makeDivActLikeLink('infrastructure-system__item');
   });
 });

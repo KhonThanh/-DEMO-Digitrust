@@ -25,7 +25,7 @@
         <section class="container-f container-padding">
             <div class="container-l flex flex-col product__container">
                 <h1 class="text-header-size">Tất cả sản phẩm</h1>
-                <div class="product-filter__container flex flex-wrap">
+                <!-- <div class="product-filter__container flex flex-wrap">
                     <div class="product-filter__item flex flex-col ">
                         <h4 class="product-filter__title">Loại sản phẩm</h4>
                         <form class="filter-radio flex flex-wrap">
@@ -73,10 +73,89 @@
                             </label>
                         </form>
                     </div>
+                </div> -->
+
+                <div class="product-filter__container flex flex-wrap">
+
+                    <!-- Hãng -->
+                    <div class="product-filter__item flex flex-col">
+                        <label class="product-filter__label">Hãng</label>
+                        <div class="product-filter__select-wrap">
+                            <select class="product-filter__select" name="brand">
+                                <option value="">Chọn hãng</option>
+                                <option value="digicert">DigiCert</option>
+                                <option value="geotrust">GeoTrust</option>
+                                <option value="rapidssl">RapidSSL</option>
+                                <option value="thawte">Thawte</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Loại sản phẩm -->
+                    <div class="product-filter__item flex flex-col">
+                        <label class="product-filter__label">Loại sản phẩm</label>
+                        <div class="product-filter__select-wrap">
+                            <select class="product-filter__select" id="productType">
+                                <option value="">Chọn loại</option>
+                                <option value="dv">DV</option>
+                                <option value="ov">OV</option>
+                                <option value="ev">EV</option>
+                                <option value="code">Code Signing Certificates</option>
+                                <option value="digital">Digital Signatures</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- SSL Extra Options -->
+                <div class="product-filter__extra flex flex-wrap hidden" id="sslOptions">
+
+                    <div class="product-filter__item flex flex-col">
+                        <label class="product-filter__label">Hỗ trợ đa tên miền</label>
+                        <div class="product-filter__select-wrap">
+                            <select class="product-filter__select">
+                                <option value="yes">Có</option>
+                                <option value="no">Không</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="product-filter__item flex flex-col">
+                        <label class="product-filter__label">Hỗ trợ Subdomain không giới hạn</label>
+                        <div class="product-filter__select-wrap">
+                            <select class="product-filter__select">
+                                <option value="yes">Có</option>
+                                <option value="no">Không</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="product-filter__item flex flex-col">
+                        <label class="product-filter__label">Tính năng quét mã độc</label>
+                        <div class="product-filter__select-wrap">
+                            <select class="product-filter__select">
+                                <option value="yes">Có</option>
+                                <option value="no">Không</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="product-filter__item flex flex-col">
+                        <label class="product-filter__label">Đánh giá lỗ hổng bảo mật</label>
+                        <div class="product-filter__select-wrap">
+                            <select class="product-filter__select">
+                                <option value="yes">Có</option>
+                                <option value="no">Không</option>
+                            </select>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="all-product__content flex flex-wrap">
                     <a href="#" class="product-item">
                         <div class="product-item__content flex flex-col">
+                            <img src="./img/banner/banner-home.png" alt="">
                             <h5>DigiCert EV SSL</h5>
                             <p>Highest assurance, green address bar</p>
                             <em>From $XXX/year</em>
@@ -85,6 +164,7 @@
                     </a>
                     <a href="#" class="product-item">
                         <div class="product-item__content flex flex-col">
+                            <img src="./img/banner/banner-home.png" alt="">
                             <h5>DigiCert EV SSL</h5>
                             <p>Highest assurance, green address bar</p>
                             <em>From $XXX/year</em>
@@ -93,6 +173,7 @@
                     </a>
                     <a href="#" class="product-item">
                         <div class="product-item__content flex flex-col">
+                            <img src="./img/banner/banner-home.png" alt="">
                             <h5>DigiCert EV SSL</h5>
                             <p>Highest assurance, green address bar</p>
                             <em>From $XXX/year</em>
@@ -101,6 +182,7 @@
                     </a>
                     <a href="#" class="product-item">
                         <div class="product-item__content flex flex-col">
+                            <img src="./img/banner/banner-home.png" alt="">
                             <h5>DigiCert EV SSL</h5>
                             <p>Highest assurance, green address bar</p>
                             <em>From $XXX/year</em>
@@ -109,6 +191,7 @@
                     </a>
                     <a href="#" class="product-item">
                         <div class="product-item__content flex flex-col">
+                            <img src="./img/banner/banner-home.png" alt="">
                             <h5>DigiCert EV SSL</h5>
                             <p>Highest assurance, green address bar</p>
                             <em>From $XXX/year</em>
@@ -117,6 +200,7 @@
                     </a>
                     <a href="#" class="product-item">
                         <div class="product-item__content flex flex-col">
+                            <img src="./img/banner/banner-home.png" alt="">
                             <h5>DigiCert EV SSL</h5>
                             <p>Highest assurance, green address bar</p>
                             <em>From $XXX/year</em>
@@ -125,6 +209,7 @@
                     </a>
                     <a href="#" class="product-item">
                         <div class="product-item__content flex flex-col">
+                            <img src="./img/banner/banner-home.png" alt="">
                             <h5>DigiCert EV SSL</h5>
                             <p>Highest assurance, green address bar</p>
                             <em>From $XXX/year</em>
@@ -133,6 +218,7 @@
                     </a>
                     <a href="#" class="product-item">
                         <div class="product-item__content flex flex-col">
+                            <img src="./img/banner/banner-home.png" alt="">
                             <h5>DigiCert EV SSL</h5>
                             <p>Highest assurance, green address bar</p>
                             <em>From $XXX/year</em>
@@ -141,6 +227,7 @@
                     </a>
                     <a href="#" class="product-item">
                         <div class="product-item__content flex flex-col">
+                            <img src="./img/banner/banner-home.png" alt="">
                             <h5>DigiCert EV SSL</h5>
                             <p>Highest assurance, green address bar</p>
                             <em>From $XXX/year</em>
@@ -149,6 +236,7 @@
                     </a>
                     <a href="#" class="product-item">
                         <div class="product-item__content flex flex-col">
+                            <img src="./img/banner/banner-home.png" alt="">
                             <h5>DigiCert EV SSL</h5>
                             <p>Highest assurance, green address bar</p>
                             <em>From $XXX/year</em>
@@ -157,6 +245,7 @@
                     </a>
                     <a href="#" class="product-item">
                         <div class="product-item__content flex flex-col">
+                            <img src="./img/banner/banner-home.png" alt="">
                             <h5>DigiCert EV SSL</h5>
                             <p>Highest assurance, green address bar</p>
                             <em>From $XXX/year</em>
@@ -165,6 +254,7 @@
                     </a>
                     <a href="#" class="product-item">
                         <div class="product-item__content flex flex-col">
+                            <img src="./img/banner/banner-home.png" alt="">
                             <h5>DigiCert EV SSL</h5>
                             <p>Highest assurance, green address bar</p>
                             <em>From $XXX/year</em>
@@ -173,6 +263,7 @@
                     </a>
                     <a href="#" class="product-item">
                         <div class="product-item__content flex flex-col">
+                            <img src="./img/banner/banner-home.png" alt="">
                             <h5>DigiCert EV SSL</h5>
                             <p>Highest assurance, green address bar</p>
                             <em>From $XXX/year</em>
@@ -181,6 +272,7 @@
                     </a>
                     <a href="#" class="product-item">
                         <div class="product-item__content flex flex-col">
+                            <img src="./img/banner/banner-home.png" alt="">
                             <h5>DigiCert EV SSL</h5>
                             <p>Highest assurance, green address bar</p>
                             <em>From $XXX/year</em>
@@ -189,6 +281,7 @@
                     </a>
                     <a href="#" class="product-item">
                         <div class="product-item__content flex flex-col">
+                            <img src="./img/banner/banner-home.png" alt="">
                             <h5>DigiCert EV SSL</h5>
                             <p>Highest assurance, green address bar</p>
                             <em>From $XXX/year</em>
@@ -197,6 +290,7 @@
                     </a>
                     <a href="#" class="product-item">
                         <div class="product-item__content flex flex-col">
+                            <img src="./img/banner/banner-home.png" alt="">
                             <h5>DigiCert EV SSL</h5>
                             <p>Highest assurance, green address bar</p>
                             <em>From $XXX/year</em>
@@ -205,6 +299,7 @@
                     </a>
                     <a href="#" class="product-item">
                         <div class="product-item__content flex flex-col">
+                            <img src="./img/banner/banner-home.png" alt="">
                             <h5>DigiCert EV SSL</h5>
                             <p>Highest assurance, green address bar</p>
                             <em>From $XXX/year</em>
@@ -213,6 +308,7 @@
                     </a>
                     <a href="#" class="product-item">
                         <div class="product-item__content flex flex-col">
+                            <img src="./img/banner/banner-home.png" alt="">
                             <h5>DigiCert EV SSL</h5>
                             <p>Highest assurance, green address bar</p>
                             <em>From $XXX/year</em>
@@ -221,6 +317,7 @@
                     </a>
                     <a href="#" class="product-item">
                         <div class="product-item__content flex flex-col">
+                            <img src="./img/banner/banner-home.png" alt="">
                             <h5>DigiCert EV SSL</h5>
                             <p>Highest assurance, green address bar</p>
                             <em>From $XXX/year</em>
@@ -229,6 +326,7 @@
                     </a>
                     <a href="#" class="product-item">
                         <div class="product-item__content flex flex-col">
+                            <img src="./img/banner/banner-home.png" alt="">
                             <h5>DigiCert EV SSL</h5>
                             <p>Highest assurance, green address bar</p>
                             <em>From $XXX/year</em>
@@ -237,6 +335,7 @@
                     </a>
                     <a href="#" class="product-item">
                         <div class="product-item__content flex flex-col">
+                            <img src="./img/banner/banner-home.png" alt="">
                             <h5>DigiCert EV SSL</h5>
                             <p>Highest assurance, green address bar</p>
                             <em>From $XXX/year</em>
@@ -245,6 +344,7 @@
                     </a>
                     <a href="#" class="product-item">
                         <div class="product-item__content flex flex-col">
+                            <img src="./img/banner/banner-home.png" alt="">
                             <h5>DigiCert EV SSL</h5>
                             <p>Highest assurance, green address bar</p>
                             <em>From $XXX/year</em>
@@ -253,6 +353,7 @@
                     </a>
                     <a href="#" class="product-item">
                         <div class="product-item__content flex flex-col">
+                            <img src="./img/banner/banner-home.png" alt="">
                             <h5>DigiCert EV SSL</h5>
                             <p>Highest assurance, green address bar</p>
                             <em>From $XXX/year</em>
@@ -261,61 +362,21 @@
                     </a>
                     <a href="#" class="product-item">
                         <div class="product-item__content flex flex-col">
+                            <img src="./img/banner/banner-home.png" alt="">
                             <h5>DigiCert EV SSL</h5>
                             <p>Highest assurance, green address bar</p>
                             <em>From $XXX/year</em>
                             <div class="btn-custom flex center-ver center-hor">XEM CHI TIẾT</div>
                         </div>
                     </a>
-                    <a href="#" class="product-item">
-                        <div class="product-item__content flex flex-col">
-                            <h5>DigiCert EV SSL</h5>
-                            <p>Highest assurance, green address bar</p>
-                            <em>From $XXX/year</em>
-                            <div class="btn-custom flex center-ver center-hor">XEM CHI TIẾT</div>
-                        </div>
-                    </a>
-                    <a href="#" class="product-item">
-                        <div class="product-item__content flex flex-col">
-                            <h5>DigiCert EV SSL</h5>
-                            <p>Highest assurance, green address bar</p>
-                            <em>From $XXX/year</em>
-                            <div class="btn-custom flex center-ver center-hor">XEM CHI TIẾT</div>
-                        </div>
-                    </a>
-                    <a href="#" class="product-item">
-                        <div class="product-item__content flex flex-col">
-                            <h5>DigiCert EV SSL</h5>
-                            <p>Highest assurance, green address bar</p>
-                            <em>From $XXX/year</em>
-                            <div class="btn-custom flex center-ver center-hor">XEM CHI TIẾT</div>
-                        </div>
-                    </a>
-                    <a href="#" class="product-item">
-                        <div class="product-item__content flex flex-col">
-                            <h5>DigiCert EV SSL</h5>
-                            <p>Highest assurance, green address bar</p>
-                            <em>From $XXX/year</em>
-                            <div class="btn-custom flex center-ver center-hor">XEM CHI TIẾT</div>
-                        </div>
-                    </a>
-                    <a href="#" class="product-item">
-                        <div class="product-item__content flex flex-col">
-                            <h5>DigiCert EV SSL</h5>
-                            <p>Highest assurance, green address bar</p>
-                            <em>From $XXX/year</em>
-                            <div class="btn-custom flex center-ver center-hor">XEM CHI TIẾT</div>
-                        </div>
-                    </a>
-                    <a href="#" class="product-item">
-                        <div class="product-item__content flex flex-col">
-                            <h5>DigiCert EV SSL</h5>
-                            <p>Highest assurance, green address bar</p>
-                            <em>From $XXX/year</em>
-                            <div class="btn-custom flex center-ver center-hor">XEM CHI TIẾT</div>
-                        </div>
-                    </a>
-
+                </div>
+                <div class="container-m pagination flex center-hor gap-10">
+                    <button class="btn-custom-fit custom-item pagination-btn__custom bg-white">←</button>
+                    <button class="btn-custom-fit custom-item pagination-btn__custom bg-white active">1</button>
+                    <button class="btn-custom-fit custom-item pagination-btn__custom bg-white">2</button>
+                    <button class="btn-custom-fit custom-item pagination-btn__custom bg-white">3</button>
+                    <button class="btn-custom-fit custom-item pagination-btn__custom bg-white">4</button>
+                    <button class="btn-custom-fit custom-item pagination-btn__custom bg-white">→</button>
                 </div>
             </div>
         </section>

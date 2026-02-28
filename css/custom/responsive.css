@@ -1,7 +1,4 @@
 @media screen and (max-width: 1270px) {
-    .product-item {
-        width: calc(100% / 5 - 20px);
-    }
 }
 
 @media screen and (min-width: 1200px) {

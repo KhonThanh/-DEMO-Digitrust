@@ -985,11 +985,88 @@
 
 .feature-product__list {}
 
+/* css pagination */
+.pagination {
+    padding-top: 20px;
+    gap: 20px;
+}
+
+.pagination-btn__custom {
+    aspect-ratio: 1 / 1;
+    min-height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.pagination-btn__custom.active {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.pagination-btn__custom:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+/* css filer sản phẩm */
+.product-filter__extra {
+    gap: 20px;
+}
+
+.product-filter__extra.hidden {
+    display: none !important;
+}
+
+.product-filter__container {
+    gap: 20px;
+}
+
+.product-filter__item {
+    min-width: 220px;
+}
+
+.product-filter__label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    min-width: 150px;
+}
+
+.product-filter__select-wrap {
+    height: 44px;
+    padding: 0 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: var(--white-background-color);
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.product-filter__select-wrap:hover {
+    border-color: var(--primary-color);
+}
+
+.product-filter__select-wrap:focus-within {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+.product-filter__select {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    cursor: pointer;
+}
+
 /* CSS sản phẩm */
 
 .product-filter__container,
 .product__container {
-    gap: 30px;
+    gap: 20px;
 }
 
 .product-filter__container {}
@@ -1007,13 +1084,21 @@
 }
 
 .product-item {
-    width: calc(100% / 6 - 20px);
+    width: calc(100% / 4 - 20px);
     background-color: var(--white-color);
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.4);
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.15);
     padding: 20px 10px;
 }
+
+.product-item img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
 
 .product-item__content h5 {
     text-transform: capitalize;
@@ -1358,7 +1443,7 @@
 
 .next-blog__next {}
 
-.email-benefits__title{
+.email-benefits__title {
     padding: 20px;
     border-radius: 10px;
 }
