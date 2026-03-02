@@ -1181,11 +1181,19 @@
 }
 
 /* css trang chi tiết sản phẩm */
-.product-hero {
-    background-image: url(../../img/banner/banner-detail-product.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto;
+
+.background-product{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.background-product img{
+    object-position: center;
+    object-fit: cover;
+    height: 100%;
 }
 
 .product-title {
