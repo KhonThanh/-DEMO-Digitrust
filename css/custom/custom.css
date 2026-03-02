@@ -10,6 +10,18 @@
     height: auto;
 }
 
+.user-login img {
+    max-height: 20px;
+}
+
+.user-login.hidden {
+    display: none;
+}
+
+.user-login.active {
+    display: block;
+}
+
 .header-top,
 .header-bottom {
     justify-content: space-between;
@@ -885,15 +897,21 @@
     position: relative;
 }
 
+.form-group__second,
 .form-group input {
     width: 100%;
     height: 44px;
     padding: 0 14px;
     font-size: 14px;
     border-radius: 8px;
-    border: 1px solid var(--white-background-second-color);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     outline: none;
     transition: all 0.2s ease;
+}
+
+.tool-page .form-group__second select {
+    border: transparent;
+    width: 100%;
 }
 
 .form-group input::placeholder {
@@ -950,6 +968,11 @@
     background: var(--white-blue);
 }
 
+.tool-page {
+    padding: 10px;
+    border-radius: 10px;
+}
+
 .auth-section button {
     width: 100%;
     height: 44px;
@@ -964,9 +987,54 @@
     transition: background 0.2s ease;
 }
 
+.btn-generate {
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: transparent;
+}
+
+.account-manager__btn {
+    width: fit-content !important;
+    padding: 10px 20px;
+}
+
 .auth-section button:hover {
     background: var(--primary-color);
 }
+
+/* css bill */
+.billing-form__item {}
+
+.checkout-right {
+    height: fit-content;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.summary-total {
+    padding: 10px;
+}
+
+.box-header {
+    padding: 10px 0px;
+}
+
+
+.summary-content {
+    padding: 0px 10px;
+}
+
+.summary-item {}
+
+.checkout-right .price strong {
+    font-size: calc(var(--font-size-base) + 20px);
+    color: var(--error-color);
+}
+
+.discount {}
 
 /* css vì sao chọn chúng tôi */
 

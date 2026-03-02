@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitrust</title>
+    <link rel="icon" type="image/png" href="./img/logo/logo-favicon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <header class="container-f" data-include="./component/header.html"></header>
+    <main class="container-f flex flex-col center-hor">
+        <section class="flex bg-gray container-f">
+            <div class="container-l nav-bar__container">
+                <a href="#" class="nav-bar__item">Trang chủ</a>
+                <a href="#" class="nav-bar__item">Giỏ hàng</a>
+            </div>
+        </section>
+        <section class="container-f checkout-section">
+            <div class="container-l flex gap-20px flex-wrap checkout-container">
+                <div class="tool-page flex flex-col flex-1 gap-20px">
+                    <div class="tool-box__header">
+                        <h3>Billing Details</h3>
+                    </div>
+                    <form class="billing-form js-validate-form flex flex-col gap-20px" data-form="billing">
+                        <div class="flex flex-wrap gap-20px">
+                            <div class="billing-form__item flex-1 flex flex-col gap-10px">
+                                <p>Email</p>
+                                <div class="form-group flex">
+                                    <input type="email" name="email" required data-msg="Vui lòng nhập email hợp lệ">
+                                    <small class="error-msg"></small>
+                                </div>
+                            </div>
+
+                            <div class="billing-form__item flex-1 flex flex-col gap-10px">
+                                <p>Full Name</p>
+                                <div class="form-group flex">
+                                    <input type="text" name="fullName" required minlength="2"
+                                        data-msg="Tên tối thiểu 2 ký tự">
+                                    <small class="error-msg"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-20px">
+                            <div class="billing-form__item flex-1 flex flex-col gap-10px">
+                                <p>Organization Name</p>
+                                <div class="form-group flex">
+                                    <input type="text" name="organization" required minlength="2"
+                                        data-msg="Tên tổ chức tối thiểu 2 ký tự">
+                                    <small class="error-msg"></small>
+                                </div>
+                            </div>
+
+                            <div class="billing-form__item flex-1 flex flex-col gap-10px">
+                                <p>VAT Number</p>
+                                <div class="form-group flex">
+                                    <input type="text" name="vat">
+                                    <small class="error-msg"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-20px">
+                            <div class="billing-form__item flex-1 flex flex-col gap-10px">
+                                <p>Country</p>
+                                <div class="form-group__second flex">
+                                    <select name="country" required data-msg="Vui lòng chọn quốc gia">
+                                        <option value="">-- Select Country --</option>
+                                        <option value="VN">Vietnam</option>
+                                        <option value="US">United States</option>
+                                        <option value="JP">Japan</option>
+                                    </select>
+                                    <small class="error-msg"></small>
+                                </div>
+                            </div>
+
+                            <div class="billing-form__item flex-1 flex flex-col gap-10px">
+                                <p>Street Address</p>
+                                <div class="form-group flex">
+                                    <input type="text" name="address" required data-msg="Vui lòng nhập địa chỉ">
+                                    <small class="error-msg"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-20px">
+                            <div class="billing-form__item flex-1 flex flex-col gap-10px">
+                                <p>City</p>
+                                <div class="form-group flex">
+                                    <input type="text" name="city" required data-msg="Vui lòng nhập thành phố">
+                                    <small class="error-msg"></small>
+                                </div>
+                            </div>
+
+                            <div class="billing-form__item flex-1 flex flex-col gap-10px">
+                                <p>State / Region</p>
+                                <div class="form-group flex">
+                                    <input type="text" name="state" required data-msg="Vui lòng nhập tỉnh / bang">
+                                    <small class="error-msg"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-20px">
+                            <div class="billing-form__item flex-1 flex flex-col gap-10px">
+                                <p>Zip Code</p>
+                                <div class="form-group flex">
+                                    <input type="text" name="zip" required data-msg="Vui lòng nhập mã bưu điện">
+                                    <small class="error-msg"></small>
+                                </div>
+                            </div>
+
+                            <div class="billing-form__item flex-1 flex flex-col gap-10px">
+                                <p>Phone</p>
+                                <div class="form-group flex">
+                                    <input type="tel" name="phone" required pattern="^[0-9+ ]{8,15}$"
+                                        data-msg="Vui lòng nhập số điện thoại hợp lệ">
+                                    <small class="error-msg"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-generate bg-primary text-color-white">
+                            Đặt hàng
+                        </button>
+                    </form>
+                </div>
+                <div class="checkout-right flex-1 flex-col flex gap-20px">
+                    <div class="box-header bg-primary">
+                        <h2 class="text-center text-color-white">ORDER SUMMARY</h2>
+                    </div>
+                    <div class="summary-content flex-col flex gap-20px">
+                        <div class="summary-item flex-col flex gap-10px">
+                            <strong>Thawte SSL Webserver EV</strong>
+                            <p>3 years</p>
+                            <div class="price"><strong>$482.70</strong></div>
+                        </div>
+                        <div class="summary-item discount flex gap-10px">
+                            <span>Discount</span>
+                            <strong>- $34.47</strong>
+                        </div>
+                    </div>
+                    <div class="summary-total bg-secondary jus-content flex gap-10px">
+                        <span class="text-color-white">Total Amount</span>
+                        <strong class="text-color-white">$482.70</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+    <footer class="container-f bg-white center-ver" data-include="./component/footer.html"></footer>
+    <section class="cta-floating flex flex-col" data-include="./component/cta-floating.html"></section>
+    <section class="btntotop__container pos-fixed bg-white" data-include="./component/rolltotop.html" id="btnToTop">
+    </section>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="./js/frontend.js"></script>
+</body>
+
+</html>
