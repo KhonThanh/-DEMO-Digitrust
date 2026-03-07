@@ -71,14 +71,14 @@
                         <form class="contact-form js-validate-form flex flex-col" data-form="contact">
 
                             <div class="form-row flex">
-                                <div class="form-group flex flex-col">
+                                <div class="form-group gap-20px flex flex-col">
                                     <label>Họ và tên <span>*</span></label>
                                     <input type="text" name="full_name" required minlength="3"
                                         data-msg="Vui lòng nhập họ tên (tối thiểu 3 ký tự)">
                                     <small class="error-msg"></small>
                                 </div>
 
-                                <div class="form-group flex flex-col">
+                                <div class="form-group gap-20px flex flex-col">
                                     <label>Email Doanh nghiệp</label>
                                     <input type="email" name="email" data-msg="Email không hợp lệ" autocomplete="email">
                                     <small class="error-msg"></small>
@@ -86,14 +86,14 @@
                             </div>
 
                             <div class="form-row flex">
-                                <div class="form-group flex flex-col">
+                                <div class="form-group gap-20px flex flex-col">
                                     <label>Số điện thoại <span>*</span></label>
                                     <input type="tel" name="phone" required pattern="^0\d{9}$"
                                         data-msg="Số điện thoại không hợp lệ">
                                     <small class="error-msg"></small>
                                 </div>
 
-                                <div class="form-group flex flex-col">
+                                <div class="form-group gap-20px flex flex-col">
                                     <label>Tên công ty</label>
                                     <input type="text" name="company">
                                     <small class="error-msg"></small>
@@ -101,9 +101,9 @@
                             </div>
 
                             <div class="form-row flex">
-                                <div class="form-group flex flex-col">
+                                <div class="form-group gap-20px flex flex-col">
                                     <label>Dịch vụ quan tâm <span>*</span></label>
-                                    <div class="form-group__container">
+                                    <div class="form-group gap-20px__container">
                                         <select name="service" required>
                                             <option value="">Tư vấn dịch vụ</option>
                                             <option value="ssl">SSL Certificates</option>
@@ -115,7 +115,7 @@
                                     <small class="error-msg"></small>
                                 </div>
 
-                                <div class="form-group flex flex-col">
+                                <div class="form-group gap-20px flex flex-col">
                                     <label>Ngân sách dự kiến <span>*</span></label>
                                     <input type="text" name="budget" required
                                         data-msg="Vui lòng nhập ngân sách dự kiến">
@@ -123,13 +123,13 @@
                                 </div>
                             </div>
 
-                            <div class="form-group flex flex-col">
+                            <div class="form-group gap-20px flex flex-col">
                                 <label>Mô tả nhu cầu của bạn <span>*</span></label>
                                 <textarea name="message" rows="4" required minlength="10"
                                     data-msg="Vui lòng mô tả tối thiểu 10 ký tự"></textarea>
                                 <small class="error-msg"></small>
                             </div>
-                            <div class="form-group captcha-box">
+                            <div class="form-group gap-20px captcha-box">
                                 <div class="fake-recaptcha">
                                     <input type="checkbox" name="captcha" required>
                                     <span>I'm not a robot</span>
@@ -137,7 +137,7 @@
                                 <small class="error-msg"></small>
                             </div>
 
-                            <div class="form-group full-width">
+                            <div class="form-group gap-20px full-width">
                                 <button type="submit" class="btn-submit">
                                     Gửi yêu cầu tư vấn
                                 </button>
